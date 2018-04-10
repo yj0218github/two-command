@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>应用中心-排班管理页面</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/apply_c_block.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" /> -->
+	<link rel="stylesheet" type="text/css" href="../js/jedate/skin/jedate.css" />
+</head>
+<body>
+	<div class="apply-nav-con">
+		<div class="apply-c-up">
+			<div class="input-label">排班类型：</div>
+			<div class="input-text">
+				<div class="input-block">
+					<input type="text" class="input-w1">
+					<span class="input-icon"></span>
+					<ul class="select-nav">
+						<li>指挥中心管理</li>
+						<li>指挥中心管理2</li>
+						<li>指挥中心管理3</li>
+					</ul>
+				</div>
+			</div>
+			<div class="input-label">时间：</div>
+			<div class="input-text">
+				<div class="input-block">
+					<input type="text" id="dateinfo4" class="input-w1" />
+				</div>
+			</div>
+			<div class="input-btn">
+				<a class="blue-btn choose" style="display: inline-block;">查询</a>
+				<a class="blue-btn duty-des" style="display: inline-block;">值班详情</a>
+			</div>
+			<div class="input-btn-r">
+				<a class="blue-big-btn">模板下载</a>
+				<a class="blue-big-btn">数据上传</a>
+				<a class="blue-big-btn">排班导出</a>
+				<a class="blue-big-btn">保存</a>
+			</div>
+		</div>
+		<div class="app-nav-tab">
+			<div class="zbap-container">
+				<div class="zbap-thead">
+					<table cellspacing="0" cellpadding="0" border="0">
+						<tr>
+							<th rowspan="2">值班时间</th>
+							<th rowspan="2">星期</th>
+							<th>总值班长</th>
+							<th>副总值班长</th>
+							<th>备勤组</th>
+							<th rowspan="2">值班长</th>
+							<th rowspan="2">副值班长</th>
+							<th rowspan="2">值班人员</th>
+						</tr>
+						<tr>
+							<th>全天班</th>
+							<th>全天班</th>
+							<th>全天班</th>
+						</tr>
+					</table>
+				</div>
+				<div class="zbap-tbody zbap-tbody1">
+					<table>						
+						<tr>
+							<td>2018-03-01</td>
+							<td>星期四</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>2018-03-02</td>
+							<td>星期五</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>2018-03-03</td>
+							<td>星期六</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>2018-03-04</td>
+							<td>星期日</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>2018-03-05</td>
+							<td>星期一</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>2018-03-06</td>
+							<td>星期二</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>2018-03-07</td>
+							<td>星期三</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>2018-03-08</td>
+							<td>星期四</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>2018-03-09</td>
+							<td>星期五</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>2018-03-10</td>
+							<td>星期六</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>2018-03-04</td>
+							<td>星期日</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>2018-03-05</td>
+							<td>星期一</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>2018-03-06</td>
+							<td>星期二</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>2018-03-07</td>
+							<td>星期三</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>2018-03-08</td>
+							<td>星期四</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>2018-03-09</td>
+							<td>星期五</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>2018-03-10</td>
+							<td>星期六</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>2018-03-04</td>
+							<td>星期日</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>2018-03-05</td>
+							<td>星期一</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>2018-03-06</td>
+							<td>星期二</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>2018-03-07</td>
+							<td>星期三</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>2018-03-08</td>
+							<td>星期四</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>2018-03-09</td>
+							<td>星期五</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>2018-03-10</td>
+							<td>星期六</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 值班详细信息弹框 -->
+	<div class="wrapper1" id="duty-details" style="display: none;">
+		<div class="duty-destails">
+			<div class="jyld-row clearfix">
+				<div class="jyld-block clearfix">
+					<div class="left-title"><span>监狱领导</span></div>
+					<div class="right-block">
+						<div style="width: 400px;height: 180px; overflow: hidden;">
+						<div class="jy-part-1">
+							<div class="jy-part-con-1">
+								<div class="user-part-1 clearfix">
+									<img src="../images/defalt-img.png" alt="照片">
+									<p>张三1</p>
+									<p>管教科等</p>
+									<p>606061</p>
+								</div>
+								<div class="user-part-1 clearfix">
+									<img src="../images/defalt-img.png" alt="照片">
+									<p>张三2</p>
+									<p>管教科等</p>
+									<p>606061</p>
+								</div>
+								<div class="user-part-1 clearfix">
+									<img src="../images/defalt-img.png" alt="照片">
+									<p>张三3</p>
+									<p>管教科等</p>
+									<p>606061</p>
+								</div>
+								<div class="user-part-1 clearfix">
+									<img src="../images/defalt-img.png" alt="照片">
+									<p>张三4</p>
+									<p>管教科等</p>
+									<p>606061</p>
+								</div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</div>
+				<div class="jyld-block clearfix">
+					<div class="left-title"><span>总值班长</span></div>
+					<div class="right-block">
+						<div style="width: 400px;height: 180px; overflow: hidden;">
+							<div class="jy-part">
+								<div class="jy-part-con">
+									<div class="user-part clearfix">
+										<img src="../images/defalt-img.png" alt="照片">
+										<p>张三</p>
+										<p>信息技术科</p>
+										<p>606061</p>
+									</div>
+									<div class="user-part clearfix">
+										<img src="../images/defalt-img.png" alt="照片">
+										<p>张三2</p>
+										<p>管教科等</p>
+										<p>606061</p>
+									</div>
+									<div class="user-part clearfix">
+										<img src="../images/defalt-img.png" alt="照片">
+										<p>张三3</p>
+										<p>管教科等</p>
+										<p>606061</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="jyld-row clearfix">
+				<div class="jyld-block2 clearfix">
+					<div class="left-title"><span>监狱领导</span></div>
+					<div class="right-block">
+						<div class="jy-part2">
+							<div class="jy-part-banner">
+								<a class="up-btn">向上</a>
+								<a class="down-btn">向下</a>
+								<div class="jy-pb-con">
+									<div class="part-banner-container">
+										<div class="user-part clearfix">
+											<img src="../images/defalt-img.png" alt="照片">
+											<p class="top24">1张三12</p>
+											<p>所领导121</p>
+											<p>606061</p>
+										</div>
+										<div class="user-part clearfix">
+											<img src="../images/defalt-img.png" alt="照片">
+											<p class="top24">张三23</p>
+											<p>所领导11</p>
+											<p>60606121</p>
+										</div>
+										<div class="user-part clearfix">
+											<img src="../images/defalt-img.png" alt="照片">
+											<p class="top24">张三435</p>
+											<p>所领导545</p>
+											<p>60606154</p>
+										</div>
+										<div class="user-part clearfix">
+											<img src="../images/defalt-img.png" alt="照片">
+											<p class="top24">222</p>
+											<p>所领导11</p>
+											<p>60606121</p>
+										</div>
+										<div class="user-part clearfix">
+											<img src="../images/defalt-img.png" alt="照片">
+											<p>2dddd</p>
+											<p>所领导545</p>
+											<p>60606154</p>
+										</div>
+										<div class="user-part clearfix">
+											<img src="../images/defalt-img.png" alt="照片">
+											<p class="top24">222</p>
+											<p>所领导11</p>
+											<p>60606121</p>
+										</div>
+										<div class="user-part clearfix">
+											<img src="../images/defalt-img.png" alt="照片">
+											<p class="top24">dddd</p>
+											<p>所领导545</p>
+											<p>60606154</p>
+										</div>
+										<div class="user-part clearfix">
+											<img src="../images/defalt-img.png" alt="照片">
+											<p class="top24">张三435</p>
+											<p>所领导545</p>
+											<p>60606154</p>
+										</div>
+										<div class="user-part clearfix">
+											<img src="../images/defalt-img.png" alt="照片">
+											<p class="top24">3  222</p>
+											<p>所领导11</p>
+											<p>60606121</p>
+										</div>
+										<div class="user-part clearfix">
+											<img src="../images/defalt-img.png" alt="照片">
+											<p class="top24">dddd</p>
+											<p>所领导545</p>
+											<p>60606154</p>
+										</div>
+										<div class="user-part clearfix">
+											<img src="../images/defalt-img.png" alt="照片">
+											<p class="top24">222</p>
+											<p>所领导11</p>
+											<p>60606121</p>
+										</div>
+										<div class="user-part clearfix">
+											<img src="../images/defalt-img.png" alt="照片">
+											<p class="top24">dddd</p>
+											<p>所领导545</p>
+											<p>60606154</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/zDialog.js"></script>
+    <script type="text/javascript" src="../js/zDrag.js"></script>
+	<script type="text/javascript" src="../js/jeDate/jquery.jedate.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#dateinfo4").jeDate({
+				isinitVal:true,
+				format:"YYYY-MM-DD",
+				isinitVal:true,
+				isTime:true, //isClear:false,
+				okfun:function(val){}
+			});
+
+			closePop();
+			sliderName("jy-part","jy-part-con","user-part");   //超过两个滚动
+			sliderName("jy-part-1","jy-part-con-1","user-part-1");
+			sliderName1();			//超过四个显示上下按钮
+		});
+
+		function closePop(){
+			$(".choose").click(function(){
+				var diag = new Dialog();
+				diag.ShowButtonRow = true;
+				diag.Width = 500;
+				diag.Height = 320;
+				diag.Title = "选择";
+				diag.Top = "50%";
+				diag.Left = "50%";
+				diag.URL = "choose.html";
+				diag.Model = false;
+				diag.OKEvent=function(){
+					diag.close();
+				};
+				diag.show();
+				diag.okButton.value="确定";		//按钮文字自定义
+				diag.cancelButton.value="取消";
+			});	
+		}
+
+		$(".duty-des").click(function(){
+			var diag1 = new Dialog();
+			diag1.ShowButtonRow = true;
+			diag1.Width = 1000;
+			diag1.Height = 500;
+			diag1.Title = "值班详细信息弹框";
+			diag1.Top = "50%";
+			diag1.Left = "50%";
+			diag1.ShowButtonRow = false;
+			diag1.InvokeElementId = "duty-details";
+			diag1.Model = false;
+			diag1.show();
+		});
+
+		function sliderName(classname1,classname2,classname3){
+			var jyPart = $("."+classname1);
+			var jyPartW = jyPart.width();
+			var jyPartCon = jyPart.find("."+classname2);
+			var jyUser = jyPartCon.find("."+classname3);
+			var jyUserW = jyUser.width();
+			var jyUserLen = jyUser.length;
+			jyPartCon.width(jyUserLen*jyUserW+"px");
+			var jyPartConW = jyPartCon.width();
+
+			if(jyUserLen > 2){
+				var num = 0;
+				var timer = setInterval(function(){
+					if(num <= jyUserLen-2) {
+						jyPartCon.animate({"left": -jyUserW*2},500);
+						num++;
+					}else{
+						jyPartCon.css({"left":0});
+						num = 1;
+					}
+				},2000);
+			}
+		}
+
+		//内容多的时候显示上下点击按钮
+		function sliderName1(){
+			var jyPbCon = $(".jy-pb-con");
+			var jyPbConH = jyPbCon.height();
+			var partCon = jyPbCon.find(".part-banner-container");
+			var numPart = partCon.find(".user-part").length;
+			partCon.height(Math.ceil(numPart/4)*210);
+			var partConH = partCon.height();
+			
+			//判断是否显示上下点击按钮
+			if(numPart>4){
+				$(".up-btn, .down-btn").show();
+			}else {
+				$(".up-btn, .down-btn").hide();
+			}
+
+			$(".up-btn").click(function(){
+				if( partConH - jyPbCon[0].scrollTop > 210) {
+					jyPbCon[0].scrollTop += 210;					
+				}else {
+					jyPbCon[0].scrollTop = 0;
+					alert("上面没有了！");
+				}
+			});
+
+			$(".down-btn").click(function(){
+				if( partConH - jyPbCon[0].scrollTop > 210) {
+					jyPbCon[0].scrollTop += 210;					
+				}else {
+					jyPbCon[0].scrollTop -= partConH;
+					alert("下面没有了！");
+				}
+			});
+		}
+	</script>
+</body>
+</html>

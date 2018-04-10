@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>页面切换2</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../font-awesome-4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="../css/pop_style.css" />
+</head>
+<body>
+	<div class="wrapper1">
+		<div class="pop-main clearfix">
+			<div class="pop-left">
+				<div class="pop-left-con">
+					<ul class="pop-ullist">
+						<li _content="list-1" class="list-active">省监狱管理局</li>
+						<li _content="list-2">邑州监狱1</li>
+						<li _content="list-3">邑州监狱2</li>
+						<li _content="list-4">邑州监狱3</li>
+						<li _content="list-5">邑州监狱4</li>
+						<li _content="list-6">邑州监狱5</li>
+						<li _content="list-7">邑州监狱6</li>
+						<li _content="list-8">邑州监狱7</li>
+						<li _content="list-9">邑州监狱8</li>
+						<li _content="list-10">邑州监狱9</li>
+						<li _content="list-11">邑州监狱10</li>
+					</ul>
+				</div>
+			</div>
+			<div class="pop-right">
+				<div class="list-block list-1" style="display: block;">
+					<div class="block-items">
+						<div class="block-text">总值班长：张某某</div>
+						<div class="block-text">副值班长：刘某某</div>
+						<div class="block-text">监区执勤：100人,备勤：90人</div>
+						<div class="block-text">科室执勤：90人，备勤：60人</div>
+					</div>
+					<div class="block-charts">
+						<div id="zqCharts"></div>
+					</div>
+				</div>
+				<div class="list-block list-2">
+					sdfsfsdfd
+				</div>
+				<div class="list-block list-3">
+					sdfsf
+				</div>
+				<div class="list-block list-4">
+					sdfsf
+				</div>
+				<div class="list-block list-5">
+					sdfsf
+				</div>
+				<div class="list-block list-6">
+					sdfsf
+				</div>
+				<div class="list-block list-7">
+					sdfsf
+				</div>
+				<div class="list-block list-8">
+					sdfsf
+				</div>
+				<div class="list-block list-9">
+					sdfsf
+				</div>
+				<div class="list-block list-10">
+					sdfsf
+				</div>
+				<div class="list-block list-11">
+					sdfsf
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/highcharts.js"></script>
+    <script type="text/javascript" src="https://img.hcharts.cn/highcharts/highcharts-3d.js"></script>
+    <script type="text/javascript" src="../js/exporting.js"></script>
+    <script type="text/javascript" src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+	<script type="text/javascript">
+		$(".pop-ullist li").click(function(){
+			$(this).addClass("list-active").siblings().removeClass("list-active");
+			$("."+$(this).attr("_content")).show().siblings(".list-block").hide();
+		});
+		$("#zqCharts").highcharts({
+			chart: {
+	            renderTo: 'container',
+	            type: 'column',
+	            backgroundColor: "rgba(0,0,0,0)",
+	            options3d: {
+	                enabled: true,
+	                alpha: 0,
+	                beta: 0,
+	                depth: 20,
+	                viewDistance: 25
+	            },
+	            spacingTop: 30,
+	            spacingBottom: 0,
+	            spacingLeft: 20,
+	            spacingRight: 0
+	        },
+	        credits: {
+	            enabled: false
+	        },
+	        exporting:{
+	        	enabled: false
+	        },
+	        title: {
+	            text: ''
+	        },
+	        subtitle: {
+	            text: ''
+	        },
+	        legend: {
+	            enabled: false
+	        },
+	        plotOptions: {
+	            column: {
+	            	stacking: 'normal',
+	                depth: 25
+	            }
+	        },
+	        xAxis: {
+		        categories: ['摄像机', '门禁', '数字电网', '周界震动报警', '周界红外报警','网络报警'],
+		        labels: {
+		        	style:{
+		        		color: '#ffffff',
+		        		fontSize: '14px'
+		        	}
+		        },
+		        gridLineWidth: 0
+		    },
+		    yAxis:{
+		    	title: {
+		    		text:''
+		    	},
+		    	labels: {
+		        	style:{
+		        		color: '#ffffff',
+		        		fontSize: '14px'
+		        	}
+		        },
+		        gridLineColor: "#37486c",
+		        gridLineWidth: 2
+		    },
+		    colors: ['#f4bc2c','#0b76e5'],
+	        series: [{
+	        	name:'执勤',
+	            data: [130,210,260,320,370,240],
+	            dataLabels: {
+	            	align:'top',
+		            enabled: true,
+		            color:"#ffffff",
+		            style: {
+		            	fontSize: "12px",
+		            	textOutline: "0px 0px contrast"
+		            }
+		        }
+	        },{
+	        	name:'备勤',
+	            data: [50,110,160,220,270,150],
+	            dataLabels: {
+	            	align:'top',
+		            enabled: true,
+		            color:"#ffffff",
+		            style: {
+		            	fontSize: "12px",
+		            	textOutline: "0px 0px contrast"
+		            }
+		        }
+        	}]
+		});
+	</script>
+</body>
+</html>

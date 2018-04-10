@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>3维地图页面</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/apply_center.css" />
+	<link rel="stylesheet" type="text/css" href="../css/apply_c_block.css" />
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="../js/ztree/css/zTreeStyle/zTreeStyle.css">
+</head>
+<body>
+	<!-- <div class="third-d-content">
+		<div class="third-right">
+			<ul class="third-ul">
+				<li>
+					<a class="third-a"><img src="../images/flight_icon.png" />飞行</a>
+					<div class="tdli-con">
+						<div class="input-box clearfix">
+							<div class="input-label">文本框查询：</div>
+							<div class="input-text">
+								<div class="input-block">
+									<input type="text" class="input-w1">
+								</div>
+							</div>
+						</div>
+						<div class="input-box clearfix">
+							<div class="input-label">select框查询：</div>
+							<div class="input-text">
+								<div class="input-block">
+									<input type="text" class="input-w1">
+									<span class="input-icon" style="background: url(../images/arrow_lower2.png) no-repeat;"></span>
+									<ul class="select-nav" style="display: none;">
+										<li>查询条件4</li>
+										<li>查询条件5</li>
+										<li>查询条件6</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="input-box clearfix">
+							<div class="input-label">单选框查询：</div>
+							<div class="input-text">
+								<div class="input-radio">
+									<label><input type="radio" name="radio" />选项一</label>
+									<label><input type="radio" name="radio" />选项二</label>
+									<label><input type="radio" name="radio" />选项三三三</label>
+									<label><input type="radio" name="radio" />选项四</label>
+								</div>
+							</div>
+						</div>
+						<div class="input-box clearfix">
+							<div class="input-label">复选框查询：</div>
+							<div class="input-text">
+								<div class="input-checkbox">
+									<label><input type="checkbox" name="checkbox" />选择项一</label>
+									<label><input type="checkbox" name="checkbox" />选择项二</label>
+									<label><input type="checkbox" name="checkbox" />选择项三</label>
+									<label><input type="checkbox" name="checkbox" />选择项四</label>
+								</div>
+							</div>
+						</div>
+						<div class="input-box1 clearfix">
+							<a class="blue-btn">确定</a>
+							<a class="org-btn">关闭</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a class="third-a"><img src="../images/site_icon.png" />位置</a>
+					<div class="tdli-con">
+						<div class="input-box clearfix">
+							<div class="input-label">文本框查询：</div>
+							<div class="input-text">
+								<div class="input-block">
+									<input type="text" class="input-w1">
+								</div>
+							</div>
+						</div>
+						<div class="input-box clearfix">
+							<div class="input-label">文本框查询：</div>
+							<div class="input-text">
+								<div class="input-block">
+									<input type="text" class="input-w1">
+								</div>
+							</div>
+						</div>
+						<div class="input-box clearfix">
+							<div class="input-label">文本框查询：</div>
+							<div class="input-text">
+								<div class="input-block">
+									<input type="text" class="input-w1">
+								</div>
+							</div>
+						</div>
+						<div class="input-box clearfix">
+							<div class="input-label">select框查询：</div>
+							<div class="input-text">
+								<div class="input-block">
+									<input type="text" class="input-w1">
+									<span class="input-icon" style="background: url(../images/arrow_lower2.png) no-repeat;"></span>
+									<ul class="select-nav" style="display: none;">
+										<li>查询条件4</li>
+										<li>查询条件5</li>
+										<li>查询条件6</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="input-box clearfix">
+							<div class="input-label">select框查询：</div>
+							<div class="input-text">
+								<div class="input-block">
+									<input type="text" class="input-w1">
+									<span class="input-icon" style="background: url(../images/arrow_lower2.png) no-repeat;"></span>
+									<ul class="select-nav" style="display: none;">
+										<li>查询条件4</li>
+										<li>查询条件5</li>
+										<li>查询条件6</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="input-box clearfix">
+							<div class="input-label">select框查询：</div>
+							<div class="input-text">
+								<div class="input-block">
+									<input type="text" class="input-w1">
+									<span class="input-icon" style="background: url(../images/arrow_lower2.png) no-repeat;"></span>
+									<ul class="select-nav" style="display: none;">
+										<li>查询条件4</li>
+										<li>查询条件5</li>
+										<li>查询条件6</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="input-box clearfix">
+							<div class="input-label">单选框查询：</div>
+							<div class="input-text">
+								<div class="input-radio">
+									<label><input type="radio" name="radio" />选项一</label>
+									<label><input type="radio" name="radio" />选项二</label>
+									<label><input type="radio" name="radio" />选项三三三</label>
+									<label><input type="radio" name="radio" />选项四</label>
+								</div>
+							</div>
+						</div>
+						<div class="input-box clearfix">
+							<div class="input-label">复选框查询：</div>
+							<div class="input-text">
+								<div class="input-checkbox">
+									<label><input type="checkbox" name="checkbox" />选择项一</label>
+									<label><input type="checkbox" name="checkbox" />选择项二</label>
+									<label><input type="checkbox" name="checkbox" />选择项三</label>
+									<label><input type="checkbox" name="checkbox" />选择项四</label>
+								</div>
+							</div>
+						</div>
+						<div class="input-box1 clearfix">
+							<a class="blue-btn">确定</a>
+							<a class="org-btn">关闭</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a class="third-a"><img src="../images/roam_icon.png" />漫游</a>
+					<div class="tdli-con">
+						<div class="input-box clearfix">
+							<div class="input-label">文本框查询：</div>
+							<div class="input-text">
+								<div class="input-block">
+									<input type="text" class="input-w1">
+								</div>
+							</div>
+						</div>
+						<div class="input-box clearfix">
+							<div class="input-label">select框查询：</div>
+							<div class="input-text">
+								<div class="input-block">
+									<input type="text" class="input-w1">
+									<span class="input-icon" style="background: url(../images/arrow_lower2.png) no-repeat;"></span>
+									<ul class="select-nav" style="display: none;">
+										<li>查询条件4</li>
+										<li>查询条件5</li>
+										<li>查询条件6</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="input-box clearfix">
+							<div class="input-label">单选框查询：</div>
+							<div class="input-text">
+								<div class="input-radio">
+									<label><input type="radio" name="radio" />选项一</label>
+									<label><input type="radio" name="radio" />选项二</label>
+									<label><input type="radio" name="radio" />选项三三三</label>
+									<label><input type="radio" name="radio" />选项四</label>
+								</div>
+							</div>
+						</div>
+						<div class="input-box clearfix">
+							<div class="input-label">复选框查询：</div>
+							<div class="input-text">
+								<div class="input-checkbox">
+									<label><input type="checkbox" name="checkbox" />选择项一</label>
+									<label><input type="checkbox" name="checkbox" />选择项二</label>
+									<label><input type="checkbox" name="checkbox" />选择项三</label>
+									<label><input type="checkbox" name="checkbox" />选择项四</label>
+								</div>
+							</div>
+						</div>
+						<div class="input-box1 clearfix">
+							<a class="blue-btn">确定</a>
+							<a class="org-btn">关闭</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a class="third-a"><img src="../images/location_icon.png" />定位</a>
+					<div class="tdli-con">
+						<div class="input-box clearfix">
+							<div class="input-label">文本框查询：</div>
+							<div class="input-text">
+								<div class="input-block">
+									<input type="text" class="input-w1">
+								</div>
+							</div>
+						</div>
+						<div class="input-box clearfix">
+							<div class="input-label">select框查询：</div>
+							<div class="input-text">
+								<div class="input-block">
+									<input type="text" class="input-w1">
+									<span class="input-icon" style="background: url(../images/arrow_lower2.png) no-repeat;"></span>
+									<ul class="select-nav" style="display: none;">
+										<li>查询条件4</li>
+										<li>查询条件5</li>
+										<li>查询条件6</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="input-box clearfix">
+							<div class="input-label">单选框查询：</div>
+							<div class="input-text">
+								<div class="input-radio">
+									<label><input type="radio" name="radio" />选项一</label>
+									<label><input type="radio" name="radio" />选项二</label>
+									<label><input type="radio" name="radio" />选项三三三</label>
+									<label><input type="radio" name="radio" />选项四</label>
+								</div>
+							</div>
+						</div>
+						<div class="input-box clearfix">
+							<div class="input-label">复选框查询：</div>
+							<div class="input-text">
+								<div class="input-checkbox">
+									<label><input type="checkbox" name="checkbox" />选择项一</label>
+									<label><input type="checkbox" name="checkbox" />选择项二</label>
+									<label><input type="checkbox" name="checkbox" />选择项三</label>
+									<label><input type="checkbox" name="checkbox" />选择项四</label>
+								</div>
+							</div>
+						</div>
+						<div class="input-box1 clearfix">
+							<a class="blue-btn">确定</a>
+							<a class="org-btn">关闭</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a class="third-a"><img src="../images/recover_icon.png" />复原</a>
+					<div class="tdli-con">
+						<div class="input-box clearfix">
+							<div class="input-label">文本框查询：</div>
+							<div class="input-text">
+								<div class="input-block">
+									<input type="text" class="input-w1">
+								</div>
+							</div>
+						</div>
+						<div class="input-box clearfix">
+							<div class="input-label">select框查询：</div>
+							<div class="input-text">
+								<div class="input-block">
+									<input type="text" class="input-w1">
+									<span class="input-icon" style="background: url(../images/arrow_lower2.png) no-repeat;"></span>
+									<ul class="select-nav" style="display: none;">
+										<li>查询条件4</li>
+										<li>查询条件5</li>
+										<li>查询条件6</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="input-box1 clearfix">
+							<a class="blue-btn">确定</a>
+							<a class="org-btn">关闭</a>
+						</div>						
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div> -->
+	
+	<!-- 电子地图显示楼层框 -->
+	<!-- <div class="floor-choose">
+		<div class="ful-con">
+			<h2 class="f-h2">四监区</h2>
+			<ul>
+				<li>
+					<div class="user-defined">
+	                	<span class="circle"></span>
+	            	</div>
+	            	<label class="f-label" title="一层"><input type="radio" name="radio" class="f-input" />一层</label>
+            	</li>
+				<li>
+					<div class="user-defined">
+	                	<span class="circle"></span>
+	            	</div>
+	            	<label class="f-label" title="二层"><input type="radio" name="radio" class="f-input" />二层</label>
+				</li>
+				<li>
+					<div class="user-defined">
+	                	<span class="circle"></span>
+	            	</div>
+	            	<label class="f-label" title="三层"><input type="radio" name="radio" class="f-input" />三层</label>
+				</li>
+				<li>
+					<div class="user-defined">
+	                	<span class="circle"></span>
+	            	</div>
+	            	<label class="f-label" title="四层"><input type="radio" name="radio" class="f-input" />四层</label>
+				</li>
+				<li>
+					<div class="user-defined">
+	                	<span class="circle"></span>
+	            	</div>
+	            	<label class="f-label" title="四监区三分监区五层"><input type="radio" name="radio" class="f-input" />四监区三分监区五层</label>
+				</li>
+			</ul>
+		</div>
+	</div> -->
+
+	<!-- 通讯调度页面 -->
+	<div class="tx-dispatch">
+		<div class="tx-content">
+			<ul class="tx-ul">
+				<li class="tx-active" _content="tx-ulcon1">组别</li>
+				<li _content="tx-ulcon2">临时组别</li>
+			</ul>
+			<div class="tx-con">
+				<div class="tx-ulcon tx-ulcon1" style="display: block;">
+					<ul class="ztree item-menu" id="itemmenu"></ul>
+				</div>
+				<div class="tx-ulcon tx-ulcon2">
+					<div class="tx-tab">
+						<div class="tx-thead">
+							<table>
+								<thead>
+									<tr>
+										<th width="30%">姓名</th>
+										<th width="40%">电话</th>
+										<th width="30%">操作</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<div class="tx-tbody">
+							<table>
+								<tbody>
+									<tr>
+										<td width="30%">张三1</td>
+										<td width="40%">13258964785</td>
+										<td width="30%"><a class="blue-small-btn">删除</a></td>
+									</tr>
+									<tr>
+										<td>张三2</td>
+										<td>13258964785</td>
+										<td><a class="blue-small-btn">删除</a></td>
+									</tr>
+									<tr>
+										<td>张三3</td>
+										<td>13258964785</td>
+										<td><a class="blue-small-btn">删除</a></td>
+									</tr>
+									<tr>
+										<td>张三4</td>
+										<td>13258964785</td>
+										<td><a class="blue-small-btn">删除</a></td>
+									</tr>
+									<tr>
+										<td>张三1</td>
+										<td>13258964785</td>
+										<td><a class="blue-small-btn">删除</a></td>
+									</tr>
+									<tr>
+										<td>张三2</td>
+										<td>13258964785</td>
+										<td><a class="blue-small-btn">删除</a></td>
+									</tr>
+									<tr>
+										<td>张三3</td>
+										<td>13258964785</td>
+										<td><a class="blue-small-btn">删除</a></td>
+									</tr>
+									<tr>
+										<td>张三4</td>
+										<td>13258964785</td>
+										<td><a class="blue-small-btn">删除</a></td>
+									</tr>
+									<tr>
+										<td>张三2</td>
+										<td>13258964785</td>
+										<td><a class="blue-small-btn">删除</a></td>
+									</tr>
+									<tr>
+										<td>张三3</td>
+										<td>13258964785</td>
+										<td><a class="blue-small-btn">删除</a></td>
+									</tr>
+									<tr>
+										<td>张三4</td>
+										<td>13258964785</td>
+										<td><a class="blue-small-btn">删除</a></td>
+									</tr>
+									<tr>
+										<td>张三2</td>
+										<td>13258964785</td>
+										<td><a class="blue-small-btn">删除</a></td>
+									</tr>
+									<tr>
+										<td>张三3</td>
+										<td>13258964785</td>
+										<td><a class="blue-small-btn">删除</a></td>
+									</tr>
+									<tr>
+										<td>张三4</td>
+										<td>13258964785</td>
+										<td><a class="blue-small-btn">删除</a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a class="blue-btn">呼叫</a>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/ztree/js/jquery.ztree.core.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			heightSize();		//右侧内容距顶部高度
+
+			//右侧导航内容点击效果
+			$(".third-ul li").click(function(){
+				$(this).addClass("tdli-active").siblings().removeClass("tdli-active");
+				$(this).find(".tdli-con").show();
+				$(this).siblings("li").find(".tdli-con").hide();
+
+				$(this).find(".input-box1 .org-btn").click(function(){
+					//阻止事件冒泡
+					if (event.stopPropagation){
+                        // this code is for Mozilla and Opera   
+                        event.stopPropagation();  
+                    }else if (window.event) {  
+                        // this code is for IE   
+                        window.event.cancelBubble = true;  
+                    }
+			        var that = this;
+					$(that).parent(".input-box1").parent(".tdli-con").hide();
+				});
+			});
+
+			//点击楼层效果
+			$(".ful-con li").click(function() {
+			    $(this).addClass("active").siblings().removeClass("active");
+			});
+
+			txClick();			//通讯调度点击事件
+
+			var zTreeObj;
+			// zTree 的参数配置，深入使用请参考 API 文档（setting 配置详解）
+			var setting = {
+	    		view: {
+		    		showIcon: false,
+		    		showLine: false
+		    	}
+		    };
+		    // zTree 的数据属性，深入使用请参考 API 文档（zTreeNode 节点数据详解）
+		    var zNodes = [
+		    	{name:"数据项配置", open:false, children:[
+		       		{name:"基本信息", open:false,children:[
+			       		{name:"基本信息1"},
+			       		{name:"基本信息2"},
+			       		{name:"基本信息3"},
+			       		{name:"基本信息4"},
+			       		{name:"基本信息5"},
+			       		{name:"基本信息6"},
+			       	]}, 
+		       		{name:"家庭情况", open:false,children:[
+			       		{name:"家庭情况1"},
+			       		{name:"家庭情况2"},
+			       		{name:"家庭情况3"},
+			       		{name:"家庭情况4"},
+			       		{name:"家庭情况5"},
+			       		{name:"家庭情况6"},
+			       	]},
+			       	{name:"看守所羁押表现", open:false,children:[
+			       		{name:"看守所羁押表现1"},
+			       		{name:"看守所羁押表现2"},
+			       		{name:"看守所羁押表现3"},
+			       		{name:"看守所羁押表现看守所4"},
+			       		{name:"看守所羁押表现5"},
+			       		{name:"看守所羁押表现6"},
+			       	]},
+		       		{name:"犯罪基本情况", open:false, children:[
+			       		{name:"罪名"}, 
+			       		{name:"犯罪动机"},
+			       		{name:"作案时间"}, 
+			       		{name:"作案手段"},
+			       		{name:"作案工具"}, 
+			       		{name:"服务器状态"},
+			       		{name:"业务配置"}, 
+			       		{name:"服务器参数监测"},
+			       		{name:"数据字典测试"},
+			       		{name:"日志管理"},
+			       		{name:"当前审核状态"}, 
+			       		{name:"服务器参数监测"},
+			       		{name:"数据字典测试"},
+			       		{name:"日志管理"},
+			       		{name:"当前审核状态"}
+			       	]}
+		       	]}
+		    ];
+		    $(document).ready(function(){
+		        zTreeObj = $.fn.zTree.init($("#itemmenu"), setting, zNodes);
+		    });
+		});
+
+		//右侧内容距顶部高度
+		function heightSize() {
+			var thirdHeight = $(".third-right").height();
+			$(".third-right").css("margin-top",-thirdHeight/2+"px");
+		}
+
+		//通讯调度点击事件
+		function txClick() {
+			$(".tx-ul li").click(function(){
+				$(this).addClass("tx-active").siblings().removeClass("tx-active");
+				$("."+$(this).attr("_content")).show().siblings(".tx-ulcon").hide();
+			});
+		}
+	</script>
+</body>
+</html>

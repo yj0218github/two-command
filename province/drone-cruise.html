@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>应用中心-无人机巡航页面</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/apply_center.css" />
+	<link rel="stylesheet" type="text/css" href="../css/apply_c_block.css" />
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="../js/jedate/skin/jedate.css" />
+</head>
+<body>
+	<div class="drone-content">
+		<div class="drone-b-con">
+			<div class="drone-block">
+				<div class="left-top"></div>
+				<div class="right-top"></div>
+				<div class="left-bottom"></div>
+				<div class="right-bottom"></div>
+				<div class="drone-con"></div>
+			</div>
+			<div class="drone-block">
+				<div class="left-top"></div>
+				<div class="right-top"></div>
+				<div class="left-bottom"></div>
+				<div class="right-bottom"></div>
+				<div class="drone-con"></div>
+			</div>
+		</div>
+		<div class="drone-block1">
+			<div class="apply-title">预警坐标</div>
+			<div class="drone-con2">
+				<div class="drone-con2-ul">
+					<ul>
+						<li class="li-odd drone-liactive">预警一：<span class="org-text">X轴：256、Y轴：563</span></li>
+						<li>预警二：<span class="org-text">X轴：256、Y轴：563</span></li>
+						<li class="li-odd">预警三：<span class="org-text">X轴：256、Y轴：563</span></li>
+						<li>预警四：<span class="org-text">X轴：256、Y轴：563</span></li>
+						<li class="li-odd">预警五：<span class="org-text">X轴：256、Y轴：563</span></li>
+						<li>预警六：<span class="org-text">X轴：256、Y轴：563</span></li>
+						<li class="li-odd">预警七：<span class="org-text">X轴：256、Y轴：563</span></li>
+					</ul>
+				</div>
+			</div>
+			<div class="drone-btn">
+				<a class="blue-btn">打击</a>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/drag.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			setSize();		//右侧内容自适应高度
+			droneLi();		//li的点击事件
+		});
+
+		//右侧内容自适应高度
+		function setSize(){
+			var mainHeight = $(document.body).height();
+			$(".drone-b-con").height(mainHeight - 424);
+			var droneBCon = $(".drone-b-con").height();
+			$(".drone-block").height((droneBCon-20)/2+"px");
+			var drBlockHeight = $(".drone-block").height();
+			$(".drone-con").height((drBlockHeight-20)+"px");
+		}
+
+		//li的点击事件
+		function droneLi(){
+			$(".drone-con2 li").click(function(){
+				$(this).addClass("drone-liactive").siblings().removeClass("drone-liactive");
+			});
+		}
+	</script>
+</body>
+</html>

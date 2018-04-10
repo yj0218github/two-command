@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>页面切换2</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/pop_style.css" />
+</head>
+<body>
+	<div class="wrapper1">
+		<div class="pop-main clearfix">
+			<div class="pop-left">
+				<div class="pop-left-con">
+					<ul class="pop-ullist">
+						<li _content="list-1" class="list-active">省监狱管理局</li>
+						<li _content="list-2">邑州监狱1</li>
+						<li _content="list-3">邑州监狱2</li>
+						<li _content="list-4">邑州监狱3</li>
+						<li _content="list-5">邑州监狱4</li>
+						<li _content="list-6">邑州监狱5</li>
+						<li _content="list-7">邑州监狱6</li>
+						<li _content="list-8">邑州监狱7</li>
+						<li _content="list-9">邑州监狱8</li>
+						<li _content="list-10">邑州监狱9</li>
+						<li _content="list-11">邑州监狱10</li>
+					</ul>
+				</div>
+			</div>
+			<div class="pop-right">
+				<div class="list-block list-1" style="display: block;">
+					<p class="pop-p">在押人数：<span class="org-text">1056</span>人</p>
+					<div class="block-items">
+						<div class="block-text">当日释放：0人</div>
+						<div class="block-text">当日收押：0人</div>
+						<div class="block-text">当日禁闭：0人</div>
+						<div class="block-text">特许离监：0人</div>
+						<div class="block-text">监外就诊：0人</div>
+						<div class="block-text">重点罪犯：1056人</div>
+					</div>
+					<div class="block-charts2">
+						<div id="zqCharts2"></div>
+					</div>
+				</div>
+				<div class="list-block list-2">
+					sdfsfsdfd
+				</div>
+				<div class="list-block list-3">
+					sdfsf
+				</div>
+				<div class="list-block list-4">
+					sdfsf
+				</div>
+				<div class="list-block list-5">
+					sdfsf
+				</div>
+				<div class="list-block list-6">
+					sdfsf
+				</div>
+				<div class="list-block list-7">
+					sdfsf
+				</div>
+				<div class="list-block list-8">
+					sdfsf
+				</div>
+				<div class="list-block list-9">
+					sdfsf
+				</div>
+				<div class="list-block list-10">
+					sdfsf
+				</div>
+				<div class="list-block list-11">
+					sdfsf
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/highcharts.js"></script>
+    <script type="text/javascript" src="https://img.hcharts.cn/highcharts/highcharts-3d.js"></script>
+    <script type="text/javascript" src="../js/exporting.js"></script>
+    <script type="text/javascript" src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+	<script type="text/javascript">
+		$(".pop-ullist li").click(function(){
+			$(this).addClass("list-active").siblings().removeClass("list-active");
+			$("."+$(this).attr("_content")).show().siblings(".list-block").hide();
+		});
+		$("#zqCharts2").highcharts({
+			chart: {
+	            renderTo: 'container',
+	            type: 'column',
+	            backgroundColor: "rgba(0,0,0,0)",
+	            options3d: {
+	                enabled: true,
+	                alpha: 0,
+	                beta: 0,
+	                depth: 20,
+	                viewDistance: 25
+	            },
+	            spacingTop: 30,
+	            spacingBottom: 0,
+	            spacingLeft: 20,
+	            spacingRight: 0
+	        },
+	        credits: {
+	            enabled: false
+	        },
+	        exporting:{
+	        	enabled: false
+	        },
+	        title: {
+	            text: ''
+	        },
+	        subtitle: {
+	            text: ''
+	        },
+	        legend: {
+	            enabled: false
+	        },
+	        plotOptions: {
+	            column: {
+	            	stacking: 'normal',
+	                depth: 25
+	            }
+	        },
+	        xAxis: {
+		        categories: ['第一监区', '第二监区', '第三监区', '第四监区', '第五监区','第六监区','第七监区','第八监区','第九监区','第十监区','第十一监区'],
+		        labels: {
+		        	style:{
+		        		color: '#ffffff',
+		        		fontSize: '14px'
+		        	}
+		        },
+		        gridLineWidth: 0
+		    },
+		    yAxis:{
+		    	title: {
+		    		text:''
+		    	},
+		    	labels: {
+		        	style:{
+		        		color: '#ffffff',
+		        		fontSize: '14px'
+		        	}
+		        },
+		        gridLineColor: "#37486c",
+		        gridLineWidth: 2
+		    },
+		    colors: ['#f4bc2c','#0b76e5'],
+	        series: [{
+	        	name:'执勤',
+	            data: [130,210,260,320,370,240,160,220,270,150,110],
+	            dataLabels: {
+	            	align:'top',
+		            enabled: true,
+		            color:"#ffffff",
+		            style: {
+		            	fontSize: "12px",
+		            	textOutline: "0px 0px contrast"
+		            }
+		        }
+	        },{
+	        	name:'备勤',
+	            data: [50,110,160,220,270,150,110,154,245,223,314],
+	            dataLabels: {
+	            	align:'top',
+		            enabled: true,
+		            color:"#ffffff",
+		            style: {
+		            	fontSize: "12px",
+		            	textOutline: "0px 0px contrast"
+		            }
+		        }
+        	}]
+		});
+	</script>
+</body>
+</html>

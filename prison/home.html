@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>监狱--首页</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../font-awesome-4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/wheel.css" />
+	<link rel="stylesheet" type="text/css" href="../css/animate.min.css" />
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+</head>
+<body>
+	<div class="wrapper">
+		<iframe id="myFrameId" name="myFrameName" scrolling="no" frameborder="0" width="100%" height="100%" src="index.html">
+		</iframe>
+	</div>
+
+	<div class="a-block">
+		<a href="#wheel" class="wheel-button"><img src="../images/mj_img.png" alt="民警图片"></a>
+		<ul id="wheel" data-angle="NE" class="wheel">
+			<div class="yy"></div>
+			<li class="item"><a href="index.html" target="myFrameName"><i class="fa fa-home"></i>首页</a></li>
+			<li class="item"><a href="emergency-center.html" target="myFrameName"><i class="fa fa-bell"></i>应急中心</a></li>
+			<li class="item"><a href="three-dimen-map.html" target="myFrameName"><i class="fa fa-map"></i>三维地图</a></li>
+			<li class="item"><a href="application-center.html" target="myFrameName"><i class="fa fa-book"></i>应用中心</a></li>
+			<li class="item"><a href="monitor-platform.html" target="myFrameName"><i class="fa fa-video-camera"></i>监控平台</a></li>
+			<li class="item"><a href="control-center.html" target="myFrameName"><i class="fa fa-tasks"></i>调度中心</a></li>
+		</ul>
+	</div>
+
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.wheelmenu.js"></script>
+	<script type="text/javascript">
+		//版块儿的展开收缩
+		$(".wheel-button").wheelmenu({
+			trigger: "hover",
+			animation: "fly",
+			angle: "NE"
+		});
+
+		function testAnim() {
+		    $('iframe').removeClass().addClass('bounceInRight animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){		//检测动画结束事件
+				$(this).removeClass();
+		    });
+		};
+
+		$(".wheel li").click(function(){
+			var anim = $(this).val();
+      		testAnim(anim);
+		});
+	</script>
+</body>
+</html>

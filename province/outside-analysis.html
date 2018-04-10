@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>应用中心-外来分析页面</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/apply_center.css" />
+	<link rel="stylesheet" type="text/css" href="../css/apply_c_block.css" />
+</head>
+<body>
+	<div class="wrap-content">
+		<div class="oside-up">
+			<div class="oside-block">
+				<div class="apply-title">当前情况</div>
+				<div class="oside-charts">
+					<div class="os-situation">
+						<div class="os-sit sit-blue">
+							<a class="in-out-pri">131</a>
+							<p class="p-pri">在内车辆</p>
+						</div>
+						<div class="os-sit sit-org">
+							<a class="in-out-pri">120</a>
+							<p class="p-pri">在内人员</p>
+						</div>
+						<div class="os-sit sit-org">
+							<a class="in-out-pri">120</a>
+							<p class="p-pri">在内民警</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="oside-block">
+				<div class="apply-title">车辆进出排行榜</div>
+				<div class="oside-charts" id="vehicleRank"></div>
+			</div>
+			<div class="oside-block">
+				<div class="apply-title">人员进出排行榜</div>
+				<div class="oside-charts" id="peopleRank"></div>
+			</div>
+		</div>
+		<div class="oside-down">
+			<div class="oside-block1">
+				<div class="apply-title">外来车辆</div>
+				<div class="oside-charts1" id="outVehicle"></div>
+			</div>
+			<div class="oside-block1">
+				<div class="apply-title">外来人员</div>
+				<div class="oside-charts1" id="outPeople"></div>
+			</div>
+			<div class="oside-block1">
+				<div class="apply-title">进出民警</div>
+				<div class="oside-charts1" id="inOutPolice"></div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/highcharts.js"></script>
+    <script type="text/javascript" src="../js/highcharts-3d.js"></script>
+    <script type="text/javascript" src="../js/exporting.js"></script>
+    <script type="text/javascript" src="../js/highcharts-zh_CN.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			vehicleRank();			//车辆进出排行榜
+			peopleRank();		//人员进出排行榜
+			outVehicle();		//外来车辆
+			outPeople();			//外来人员
+			inOutPolice();			//进出民警
+			osConSize();		//获取下半部分高度
+		});
+
+		function osConSize(){
+			var osConH = $(".wrap-content").height();
+			var upConHeight = $(".oside-up").height();
+			$(".oside-down").height((osConH - upConHeight-20)+"px");
+			var osideDownH = $(".oside-down").height();
+			$(".oside-block1").height(osideDownH);
+			var osideBlockH = $(".oside-block1").height();
+			$(".oside-charts1").height((osideBlockH-40)+"px");
+		}
+
+		//车辆进出排行榜
+		function vehicleRank(){
+			var colors = ['#0193fd', '#fc8e34','#faaa28','#0b76e5', '#f2d314', '#48e44d', '#DDDF00', '#24CBE5', '#64E572', '#FF9655','#FFF263', '#6AF9C4'];
+	    	Highcharts.getOptions().colors = Highcharts.map(colors, function (color) {
+	             return {
+	                 linearGradient: { x1: 0, y1: 1, x2: -1, y2: -1 },  
+	                 stops: [[0, color], [1, Highcharts.Color(color).brighten(14).get('rgba')] // brighten(14)数值为负值，则颜色加深，正值变浅
+	                 ]
+	             };
+	         });
+			$("#vehicleRank").highcharts({
+				chart: {
+		            renderTo: 'container',
+		            type: 'column',
+		            backgroundColor: "rgba(0,0,0,0)",
+		            options3d: {
+		                enabled: true,
+		                alpha: 0,
+		                beta: 0,
+		                depth: 20,
+		                viewDistance: 25
+		            },
+		            spacingTop: 20,
+		            spacingBottom: 0,
+		            spacingLeft: 10,
+		            spacingRight: 10
+		        },
+		        credits: {
+		            enabled: false
+		        },
+		        exporting:{
+		        	enabled: false
+		        },
+		        title: {
+		            text: ''
+		        },
+		        subtitle: {
+		            text: ''
+		        },
+		        legend: {
+		            enabled: false
+		        },
+		        plotOptions: {
+		            column: {
+		                depth: 25
+		            }
+		        },
+		        xAxis: {
+			        categories: ['川A12345', '川A12345', '川A12345', '川A12345', '川A12345','川A12345','川A12345','川A12345','川A12345','川A12345'],
+			        labels: {
+			        	style:{
+			        		color: '#ffffff',
+			        		fontSize: '14px'
+			        	},
+			        	formatter: function() {
+							//获取到刻度值
+							var labelVal = this.value;
+							//实际返回的刻度值
+							var reallyVal = labelVal;
+							//判断刻度值的长度
+							if(labelVal.length > 3){
+							//截取刻度值
+								reallyVal = labelVal.substr(0,2)+"<br/>"+labelVal.substring(2,labelVal.length);
+							}
+							return reallyVal;
+						},
+						rotation: -25,
+			        },
+			        gridLineWidth: 0
+			    },
+			    yAxis:{
+			    	title: {
+			    		text:''
+			    	},
+			    	labels: {
+			        	style:{
+			        		color: '#ffffff',
+			        		fontSize: '14px'
+			        	}
+			        },
+			        gridLineColor: "#37486c",
+			        gridLineWidth: 2
+			    },
+		        series: [{
+		        	name:'',
+		            data: [130,210,160,120,200,224,185,112,224,336],
+		            dataLabels: {
+			            enabled: true,
+			            align:'top',
+			            color:"#ded702",
+			            style: {
+			            	fontSize: "12px",
+			            	textOutline: "0px 0px contrast"
+			            }
+			        }
+			    }]
+			});
+		}
+
+		//人员进出排行榜
+		function peopleRank(){
+			var colors = ['#0193fd', '#fc8e34','#faaa28','#0b76e5', '#f2d314', '#48e44d', '#DDDF00', '#24CBE5', '#64E572', '#FF9655','#FFF263', '#6AF9C4'];
+	    	Highcharts.getOptions().colors = Highcharts.map(colors, function (color) {
+	             return {
+	                 linearGradient: { x1: 0, y1: 1, x2: -1, y2: -1 },  
+	                 stops: [[0, colors[2]], [1, Highcharts.Color(colors[2]).brighten(14).get('rgba')] // brighten(14)数值为负值，则颜色加深，正值变浅
+	                 ]
+	             };  
+	         });
+			$("#peopleRank").highcharts({
+				chart: {
+		            renderTo: 'container',
+		            type: 'column',
+		            backgroundColor: "rgba(0,0,0,0)",
+		            options3d: {
+		                enabled: true,
+		                alpha: 0,
+		                beta: 0,
+		                depth: 20,
+		                viewDistance: 25
+		            },
+		            spacingTop: 20,
+		            spacingBottom: 0,
+		            spacingLeft: 10,
+		            spacingRight: 10
+		        },
+		        credits: {
+		            enabled: false
+		        },
+		        exporting:{
+		        	enabled: false
+		        },
+		        title: {
+		            text: ''
+		        },
+		        subtitle: {
+		            text: ''
+		        },
+		        legend: {
+		            enabled: false
+		        },
+		        plotOptions: {
+		            column: {
+		                depth: 25
+		            }
+		        },
+		        xAxis: {
+			        categories: ['一监区', '二监区', '三监区', '四监区', '五监区','六监区','七监区','八监区','医院','警卫大队'],
+			        labels: {
+			        	style:{
+			        		color: '#ffffff',
+			        		fontSize: '14px'
+			        	},
+			        	formatter: function() {
+							//获取到刻度值
+							var labelVal = this.value;
+							//实际返回的刻度值
+							var reallyVal = labelVal;
+							//判断刻度值的长度
+							if(labelVal.length > 3){
+							//截取刻度值
+								reallyVal = labelVal.substr(0,2)+"<br/>"+labelVal.substring(2,labelVal.length);
+							}
+							return reallyVal;
+						},
+						rotation: -25,
+			        },
+			        gridLineWidth: 0
+			    },
+			    yAxis:{
+			    	title: {
+			    		text:''
+			    	},
+			    	labels: {
+			        	style:{
+			        		color: '#ffffff',
+			        		fontSize: '14px'
+			        	}
+			        },
+			        gridLineColor: "#37486c",
+			        gridLineWidth: 2
+			    },
+		        series: [{
+		        	name:'',
+		            data: [130,210,160,120,200,224,185,112,224,336],
+		            dataLabels: {
+			            enabled: true,
+			            align:'top',
+			            color:"#ded702",
+			            style: {
+			            	fontSize: "12px",
+			            	textOutline: "0px 0px contrast"
+			            }
+			        }
+			    }]
+			});
+		}
+
+		//外来车辆
+		function outVehicle(){
+			var categories = ['8:00','10:00','12:00', '14:00', '16:00', '18:00', '20:00'];
+			Highcharts.setOptions({  
+			    colors: ['#072b72', '#059dfe', '#ED561B','#DDDF00', '#24CBE5', '#64E572', '#FF9655', '#FFF263', '#6AF9C4']  
+			});
+			$('#outVehicle').highcharts({
+		        chart: {
+		            type:'areaspline',
+		            backgroundColor: "rgba(0,0,0,0)",
+		            spacingTop: 30,
+		            spacingBottom: 30,
+		            spacingLeft: 10,
+		            spacingRight: 20
+		        },
+		        credits: {
+		            enabled: false
+		        },
+		        exporting:{
+		        	enabled: false
+		        },
+		        legend: {
+		        	enabled: false
+		        },
+		        title: {
+		            text: ''
+		        },
+		        subtitle: {
+		            text: ''
+		        },
+		        xAxis: {
+		            allowDecimals: false,
+		            labels: {
+			        	style:{
+			        		color: '#ffffff',
+			        		fontSize: '14px'
+			        	},
+			        	formatter:function(){
+	                     	return categories[this.value];
+	                 	}
+			        }
+		        },
+		        yAxis: {
+		            title: {
+		                text: ''
+		            },
+		            labels: {
+			        	style:{
+			        		color: '#ffffff',
+			        		fontSize: '14px'
+			        	}
+			        }
+		        },
+		        tooltip: {
+		            pointFormat: '{series.name} <b>{point.y:,.0f}</b>人'
+		        },
+		        plotOptions: {
+		            area: {
+		                marker: {
+		                    enabled: true,
+		                    symbol: 'circle',
+		                    states: {
+		                        hover: {
+		                            enabled: true
+		                        }
+		                    }
+		                }
+		            },
+		            series:{
+		            	marker:{
+		            		radius: 3,
+		                    fillColor:'#fff'
+		            	}
+		            }
+		        },
+		        series: [{
+		        	type:'areaspline',
+		            name: '重点犯',
+		            lineColor:'#3875f2',
+		            lineWidth: 3,
+		            fillColor: {
+		                linearGradient: [0, 0, 0, 300],
+		                stops: [
+		                    [0, Highcharts.Color(Highcharts.getOptions().colors[1]).setOpacity(0.5).get('rgba')],
+		                    [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(1).get('rgba')]
+		                ]
+		            },
+		            data: [211, 32, 110, 235, 369, 640, 105]
+		        }]
+		    });
+		}
+
+		//外来人员
+		function outPeople(){
+			var categories = ['8:00','10:00','12:00', '14:00', '16:00', '18:00', '20:00'];
+			Highcharts.setOptions({  
+			    colors: ['#072b72', '#059dfe', '#EE8A2E','#DDDF00', '#24CBE5', '#64E572', '#FF9655', '#FFF263', '#6AF9C4']  
+			});
+			$('#outPeople').highcharts({
+		        chart: {
+		            type: 'areaspline',
+		            backgroundColor: "rgba(0,0,0,0)",
+		            spacingTop: 30,
+		            spacingBottom: 30,
+		            spacingLeft: 10,
+		            spacingRight: 30
+		        },
+		        credits: {
+		            enabled: false
+		        },
+		        exporting:{
+		        	enabled: false
+		        },
+		        legend: {
+		        	enabled: false
+		        },
+		        title: {
+		            text: ''
+		        },
+		        subtitle: {
+		            text: ''
+		        },
+		        xAxis: {
+		            allowDecimals: false,
+		            labels: {
+			        	style:{
+			        		color: '#ffffff',
+			        		fontSize: '14px'
+			        	},
+			        	formatter:function(){
+	                     	return categories[this.value];
+	                 	}
+			        }
+		        },
+		        yAxis: {
+		            title: {
+		                text: ''
+		            },
+		            labels: {
+			        	style:{
+			        		color: '#ffffff',
+			        		fontSize: '14px'
+			        	}
+			        }
+		        },
+		        tooltip: {
+		            pointFormat: '{series.name} <b>{point.y:,.0f}</b>人'
+		        },
+		        plotOptions: {
+		            area: {
+		                marker: {
+		                    enabled: true,
+		                    symbol: 'circle',
+		                    states: {
+		                        hover: {
+		                            enabled: true
+		                        }
+		                    }
+		                }
+		            },
+		            series:{
+		            	marker:{
+		            		radius: 3,
+		                    fillColor:'#fff'
+		            	}
+		            }
+		        },
+		        series: [{
+		        	type:'areaspline',
+		            name: '外来人员',
+		            lineColor:'#FCD074',
+		            lineWidth: 3,
+		            fillColor: {
+		                linearGradient: [0, 0, 0, 350],
+		                stops: [
+		                    [0, Highcharts.Color(Highcharts.getOptions().colors[2]).setOpacity(1).get('rgba')],
+		                    [1, Highcharts.Color(Highcharts.getOptions().colors[2]).setOpacity(0.6).get('rgba')]
+		                ]
+		            },
+		            data: [211, 32, 110, 235, 369, 640, 105]
+		        }]
+		    });
+		}
+
+		//进出民警
+		function inOutPolice(){
+			var categories = ['8:00','10:00','12:00', '14:00', '16:00', '18:00', '20:00'];
+			Highcharts.setOptions({  
+			    colors: ['#072b72', '#059dfe', '#EE8A2E','#DDDF00', '#24CBE5', '#64E572', '#FF9655', '#FFF263', '#6AF9C4']  
+			});
+			$('#inOutPolice').highcharts({
+		        chart: {
+		            type: 'areaspline',
+		            backgroundColor: "rgba(0,0,0,0)",
+		            spacingTop: 30,
+		            spacingBottom: 30,
+		            spacingLeft: 10,
+		            spacingRight: 30
+		        },
+		        credits: {
+		            enabled: false
+		        },
+		        exporting:{
+		        	enabled: false
+		        },
+		        legend: {
+		        	enabled: false
+		        },
+		        title: {
+		            text: ''
+		        },
+		        subtitle: {
+		            text: ''
+		        },
+		        xAxis: {
+		            allowDecimals: false,
+		            labels: {
+			        	style:{
+			        		color: '#ffffff',
+			        		fontSize: '14px'
+			        	},
+			        	formatter:function(){
+	                     	return categories[this.value];
+	                 	}
+			        }
+		        },
+		        yAxis: {
+		            title: {
+		                text: ''
+		            },
+		            labels: {
+			        	style:{
+			        		color: '#ffffff',
+			        		fontSize: '14px'
+			        	}
+			        }
+		        },
+		        tooltip: {
+		            pointFormat: '{series.name} <b>{point.y:,.0f}</b>人'
+		        },
+		        plotOptions: {
+		            area: {
+		                marker: {
+		                    enabled: true,
+		                    symbol: 'circle',
+		                    states: {
+		                        hover: {
+		                            enabled: true
+		                        }
+		                    }
+		                }
+		            },
+		            series:{
+		            	marker:{
+		            		radius: 3,
+		                    fillColor:'#fff'
+		            	}
+		            }
+		        },
+		        series: [{
+		        	type:'areaspline',
+		            name: '进出民警',
+		            lineColor:'#FCD074',
+		            lineWidth: 3,
+		            fillColor: {
+		                linearGradient: [0, 0, 0, 350],
+		                stops: [
+		                    [0, Highcharts.Color(Highcharts.getOptions().colors[2]).setOpacity(1).get('rgba')],
+		                    [1, Highcharts.Color(Highcharts.getOptions().colors[2]).setOpacity(0.6).get('rgba')]
+		                ]
+		            },
+		            data: [231, 321, 130, 135, 269, 440, 205]
+		        }]
+		    });
+		}
+	</script>
+</body>
+</html>

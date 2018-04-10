@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>应用中心-防逃脱页面</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/apply_center.css" />
+	<link rel="stylesheet" type="text/css" href="../css/apply_c_block.css" />
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="../js/jedate/skin/jedate.css" />
+</head>
+<body>
+	<div class="drone-content">
+		<div class="drone-b-con1">
+			<div class="drone-block">
+				<div class="left-top"></div>
+				<div class="right-top"></div>
+				<div class="left-bottom"></div>
+				<div class="right-bottom"></div>
+				<div class="drone-con"></div>
+			</div>
+		</div>
+		<div class="drone-block2">
+			<div class="apply-title">民警信息</div>
+			<div class="drone-mj">
+				<img src="../images/defalt-img.png" />
+				<div class="drone-mj-details">
+					<div class="drone-mj-p">
+						<p class="org-text">带队民警：张三</p>
+						<p>警号：12345678</p>
+						<p>联系方式：661666</p>
+						<p>单位：狱政支队</p>
+						<p>其他民警：张三一，李四，王五，李六,张三一，李四，王五，李六,张三一，李四，王五，李六</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="drone-block1">
+			<div class="apply-title">犯人信息</div>
+			<div class="drone-con3">
+				<div class="drone-con3-ul">
+					<ul>
+						<li>
+							<div class="drone-li-con">
+								<img src="../images/defalt-img.png" />
+								<div class="drone-li-right">
+									<p>张三</p>
+									<p>2345678945</p>
+									<p>一监区一分监区</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="drone-li-con">
+								<img src="../images/defalt-img.png" />
+								<div class="drone-li-right">
+									<p>张三</p>
+									<p>2345678945</p>
+									<p>一监区一分监区</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="drone-li-con">
+								<img src="../images/defalt-img.png" />
+								<div class="drone-li-right">
+									<p>张三</p>
+									<p>2345678945</p>
+									<p>一监区一分监区</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="drone-li-con">
+								<img src="../images/defalt-img.png" />
+								<div class="drone-li-right">
+									<p>张三</p>
+									<p>2345678945</p>
+									<p>一监区一分监区</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="drone-li-con">
+								<img src="../images/defalt-img.png" />
+								<div class="drone-li-right">
+									<p>张三</p>
+									<p>2345678945</p>
+									<p>一监区一分监区</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="drone-li-con">
+								<img src="../images/defalt-img.png" />
+								<div class="drone-li-right">
+									<p>张三</p>
+									<p>2345678945</p>
+									<p>一监区一分监区</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="drone-li-con">
+								<img src="../images/defalt-img.png" />
+								<div class="drone-li-right">
+									<p>张三</p>
+									<p>2345678945</p>
+									<p>一监区一分监区</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/drag.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			setSize();		//右侧内容自适应高度
+		});
+
+		//右侧内容自适应高度
+		function setSize(){
+			var mainHeight = $(document.body).height();
+			var mjHeight = $(".drone-block2").height();
+			var prisonHeight = $(".drone-block1").height();
+
+			$(".drone-b-con1").height(mainHeight - mjHeight - prisonHeight - 40);
+			var droneBCon1 = $(".drone-b-con1").height();
+			$(".drone-block").height((droneBCon1-10)+"px");
+			var drBlockHeight = $(".drone-block").height();
+			$(".drone-con").height((drBlockHeight-20)+"px");
+		}
+	</script>
+</body>
+</html>

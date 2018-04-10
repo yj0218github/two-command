@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>监控中心</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/apply_center.css" />
+	<link rel="stylesheet" type="text/css" href="../css/monitor.css" />
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="../font-awesome-4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="../js/ztree/css/zTreeStyle/zTreeStyle.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="container">
+			<div class="apply-header">
+				<img src="../images/sc_logo.png" alt="省局logo" class="apply-logo" />
+				<div class="header-right">
+					<div class="apply-s-con">
+						<input type="text" name="" />
+						<i class="fa fa-search"></i>
+					</div>
+					<ul class="apply-ul">
+						<li><i class="fa fa-home"></i></li>
+						<li><i class="fa fa-home"></i></li>
+						<li><i class="fa fa-home"></i></li>
+					</ul>
+				</div>
+			</div>
+			<div class="monitor-content">
+				<div class="monitor-left">
+					<div class="monitor-l-up">
+						<ul class="m-up-tabs">
+							<li class="tabs-in" _content="tabs-block1">监控设备</li>
+							<li _content="tabs-block2">组合策略</li>
+						</ul>
+						<div class="tabs-con tabs-block1" style="display: block;">
+							<div class="tabs-block">
+								<ul class="ztree item-menu" id="itemmenu">这里是tree</ul>
+							</div>							
+						</div>
+						<div class="tabs-con tabs-block2">
+							<div class="tabs-block">
+								<ul class="ztree item-menu" id="itemmenu1">这里是tree</ul>		
+							</div>
+							<a class="add-strategy"><i class="fa fa-plus-circle"></i>添加策略</a>
+						</div>
+					</div>
+					<div class="monitor-l-down">
+						<div class="choose-con">
+							<div class="choose-block">
+								间隔：<div class="c-number"><span>5</span><i class="fa fa-angle-down"></i>
+									<ul class="c-ul">
+										<li>10</li>
+										<li>15</li>
+										<li>20</li>
+									</ul>
+								</div>
+							</div>
+							<a class="round-btn">轮巡</a>
+						</div>
+						<label class="check-add"><input type="checkbox" name="checkbox" />圈选追加</label>
+						<div class="c-layout-list">
+							<div class="c-layout-block c-block1"></div>
+							<div class="c-layout-block c-block2"></div>
+							<div class="c-layout-block c-block3"></div>
+							<div class="c-layout-block c-block4"></div>
+							<div class="c-layout-block c-block5"></div>
+							<div class="c-layout-block c-block6"></div>
+							<div class="c-layout-block c-block7"></div>
+							<div class="c-layout-block c-block8"></div>
+							<div class="c-layout-block c-block9"></div>
+						</div>
+					</div>					
+				</div>
+				<div class="monitor-center">
+					<a class="mc-toggle mc-folder"></a>
+				</div>
+				<div class="monitor-right"></div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/ztree/js/jquery.ztree.core.js"></script>
+	<script type="text/javascript" src="../js/zDialog.js"></script>
+    <script type="text/javascript" src="../js/zDrag.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var zTreeObj;
+			// zTree 的参数配置，深入使用请参考 API 文档（setting 配置详解）
+			var setting = {
+	    		view: {
+		    		showIcon: false,
+		    		showLine: false
+		    	}
+		    };
+		    // zTree 的数据属性，深入使用请参考 API 文档（zTreeNode 节点数据详解）
+		    var zNodes = [
+		    	{name:"数据项配置", open:false, children:[
+		       		{name:"基本信息", open:false,children:[
+			       		{name:"基本信息1"},
+			       		{name:"基本信息2"},
+			       		{name:"基本信息3"},
+			       		{name:"基本信息4"},
+			       		{name:"基本信息5"},
+			       		{name:"基本信息6"},
+			       	]}, 
+		       		{name:"家庭情况", open:false,children:[
+			       		{name:"家庭情况1"},
+			       		{name:"家庭情况2"},
+			       		{name:"家庭情况3"},
+			       		{name:"家庭情况4"},
+			       		{name:"家庭情况5"},
+			       		{name:"家庭情况6"},
+			       	]},
+			       	{name:"看守所羁押表现", open:false,children:[
+			       		{name:"看守所羁押表现1"},
+			       		{name:"看守所羁押表现2"},
+			       		{name:"看守所羁押表现3"},
+			       		{name:"看守所羁押表现4"},
+			       		{name:"看守所羁押表现5"},
+			       		{name:"看守所羁押表现6"},
+			       	]},
+		       		{name:"犯罪基本情况", open:false, children:[
+			       		{name:"罪名"}, 
+			       		{name:"犯罪动机"},
+			       		{name:"作案时间"}, 
+			       		{name:"作案手段"},
+			       		{name:"作案工具"}, 
+			       		{name:"服务器状态"},
+			       		{name:"业务配置"}, 
+			       		{name:"服务器参数监测"},
+			       		{name:"数据字典测试"},
+			       		{name:"日志管理"},
+			       		{name:"当前审核状态"}
+			       	]}
+		       	]}
+		    ];
+		    $(document).ready(function(){
+		        zTreeObj = $.fn.zTree.init($("#itemmenu"), setting, zNodes);
+		        zTreeObj = $.fn.zTree.init($("#itemmenu1"), setting, zNodes);
+		    });
+
+		    $(".m-up-tabs li").click(function(){
+		    	$(this).addClass("tabs-in").siblings().removeClass("tabs-in");
+		    	$("."+$(this).attr("_content")).show().siblings(".tabs-con").hide();
+		    });
+
+		    timeChoose();		//间隔时间选择
+		    leftToggle();		//左侧收缩
+		});
+		
+		//间隔时间选择
+		function timeChoose(){
+			$(".c-number").click(function(){
+				$(".c-ul").show();
+				$(".c-ul li").click(function(){
+					var Lival = $(this).text();
+					$(this).parents(".c-number").find("span").text(Lival);
+					$(this).parent(".c-ul").fadeOut();
+				});
+			});
+		}
+
+		//左侧收缩
+		function leftToggle(){
+			$(".mc-toggle").click(function(){
+				if(!$(this).hasClass("mc-folder")){
+					$(this).addClass("mc-folder").removeClass("mc-unfolder");
+					$(this).parent(".monitor-center").prev(".monitor-left").fadeIn();
+					$(this).parent(".monitor-center").animate({
+						left: "22rem"},100);
+					$(this).parent(".monitor-center").next(".monitor-right").animate({marginLeft:"25rem"},100);
+				}else {
+					$(this).removeClass("mc-folder").addClass("mc-unfolder");
+					$(this).parent(".monitor-center").prev(".monitor-left").fadeOut();
+					$(this).parent(".monitor-center").animate({
+						left: "0rem"},100);
+					$(this).parent(".monitor-center").next(".monitor-right").animate({width:"100%",marginLeft:"3rem"},100);
+				}
+			});
+		}
+
+		//添加策略
+		$(".add-strategy").click(function(){
+			var dialog = new Dialog();
+			dialog.Width = 1254;
+			dialog.Height = 640;
+			dialog.Title = "添加策略";
+			dialog.Top = "50%";
+			dialog.Left = "50%";
+			dialog.URL = "add-strategy.html";
+			dialog.Modal = false;
+			dialog.show();
+		});
+	</script>
+</body>
+</html>

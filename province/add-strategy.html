@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>添加策略弹框</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../font-awesome-4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="../css/pop_style.css" />
+	<link rel="stylesheet" type="text/css" href="../js/ztree/css/zTreeStyle/zTreeStyle.css">
+	<link rel="stylesheet" type="text/css" href="../js/jedate/skin/jedate.css" />
+</head>
+<body>
+	<div class="wrapper1">
+		<div class="add-s-main clearfix">
+			<div class="add-s-up">
+				<div class="input-label input-label1">策略名称：</div>
+				<div class="input-text">
+					<div class="input-block input-block1">
+						<input type="text" class="input-w1">
+						<span class="input-icon"></span>
+						<ul class="select-nav">
+							<li>策略名称一</li>
+							<li>策略名称二</li>
+							<li>策略名称三</li>
+						</ul>
+					</div>
+				</div>
+				<div class="input-label input-label1">启动规则：</div>
+				<div class="input-text">
+					<div class="input-block input-block1">
+						<input type="text" class="input-w1" id="start-text" >
+						<span class="input-icon"></span>
+						<ul class="select-nav">
+							<li>手动启动</li>
+							<li>自动启动</li>
+						</ul>
+					</div>
+				</div>
+				<div class="input-label input-label1">分屏数：</div>
+				<div class="input-text">
+					<div class="input-block input-block1">
+						<input type="text" class="input-w1">
+						<span class="input-icon"></span>
+						<ul class="select-nav">
+							<li>3</li>
+							<li>6</li>
+							<li>9</li>
+						</ul>
+					</div>
+				</div>
+				<div class="input-label input-label1">轮巡速度：</div>
+				<div class="input-text">
+					<div class="input-block input-block1">
+						<input type="text" class="input-w1">
+						<span class="input-icon"></span>
+						<ul class="select-nav">
+							<li>5秒</li>
+							<li>10秒</li>
+							<li>15秒</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="add-s-center">
+				<div class="add-s-ulcon">
+					<div class="add-s-label">启动日期：</div>
+					<ul class="">
+						<li><label><input type="checkbox" />星期一</label></li>
+						<li><label><input type="checkbox" />星期二</label></li>
+						<li><label><input type="checkbox" />星期三</label></li>
+						<li><label><input type="checkbox" />星期四</label></li>
+						<li><label><input type="checkbox" />星期五</label></li>
+						<li><label><input type="checkbox" />星期六</label></li>
+						<li><label><input type="checkbox" />星期日</label></li>
+					</ul>
+				</div>				
+				<div class="add-s-time">
+					<div class="add-s-label">启动时间：</div>
+					<input class="datainp" id="dateinfo1" type="text" placeholder="请选择日期" readonly="">
+				</div>
+			</div>
+			<div class="add-s-down">
+				<div class="add-down-left">
+					<div class="add-d-ul">
+						<ul>
+							<li class="add-d-in" _content="add-con1">监控设备</li>
+							<li _content="add-con2">策略组</li>
+						</ul>
+					</div>
+					<div class="add-d-con add-con1" style="display: block;">
+						<div class="add-d-searcon">
+							<div class="add-d-sear"><img src="../images/sear_icon.png" alt="搜索"><input type="text" placeholder="请输入编号和姓名" /></div>
+							<a class="add-d-searbtn">搜索</a>
+						</div>
+						<div class="add-d-tree">
+							<ul class="ztree item-menu" id="itemmenu3">这里是tree</ul>
+						</div>
+					</div>
+					<div class="add-d-con add-con2">
+						<div class="add-d-searcon">
+							<div class="add-d-sear"><img src="../images/sear_icon.png" alt="搜索"><input type="text" placeholder="请输入编号和姓名" /></div>
+							<a class="add-d-searbtn">搜索</a>
+						</div>
+						<div class="add-d-tree1">
+							<div class="add-d-table add-d-table1">
+								<div class="add-d-thead">
+									<table>
+										<thead>
+											<tr>
+												<th width="30%">序号</th>
+												<th width="40%">监控名称</th>
+												<th width="30%">操作</th>
+											</tr>
+										</thead>
+									</table>
+								</div>
+								<div class="add-d-tbody add-d-tbody1">
+									<table>
+										<tbody>
+											<tr class="tr-odd">
+												<td width="30%">01</td>
+												<td width="40%">监控一</td>
+												<td width="30%"><a class="del-btn">删除</a></td>
+											</tr>
+											<tr>
+												<td>02</td>
+												<td>监控二</td>
+												<td><a class="del-btn">删除</a></td>
+											</tr>
+											<tr class="tr-odd">
+												<td>03</td>
+												<td>监控三</td>
+												<td><a class="del-btn">删除</a></td>
+											</tr>
+											<tr>
+												<td>04</td>
+												<td>监控四</td>
+												<td><a class="del-btn">删除</a></td>
+											</tr>
+											<tr class="tr-odd">
+												<td>05</td>
+												<td>监控五</td>
+												<td><a class="del-btn">删除</a></td>
+											</tr>
+											<tr>
+												<td>04</td>
+												<td>监控四</td>
+												<td><a class="del-btn">删除</a></td>
+											</tr>
+											<tr class="tr-odd">
+												<td>05</td>
+												<td>监控五</td>
+												<td><a class="del-btn">删除</a></td>
+											</tr>
+											<tr>
+												<td>04</td>
+												<td>监控四</td>
+												<td><a class="del-btn">删除</a></td>
+											</tr>
+											<tr class="tr-odd">
+												<td>05</td>
+												<td>监控五</td>
+												<td><a class="del-btn">删除</a></td>
+											</tr>
+											<tr>
+												<td>04</td>
+												<td>监控四</td>
+												<td><a class="del-btn">删除</a></td>
+											</tr>
+											<tr class="tr-odd">
+												<td>05</td>
+												<td>监控五</td>
+												<td><a class="del-btn">删除</a></td>
+											</tr>
+											<tr>
+												<td>04</td>
+												<td>监控四</td>
+												<td><a class="del-btn">删除</a></td>
+											</tr>
+											<tr class="tr-odd">
+												<td>05</td>
+												<td>监控五</td>
+												<td><a class="del-btn">删除</a></td>
+											</tr>
+											<tr>
+												<td>04</td>
+												<td>监控四</td>
+												<td><a class="del-btn">删除</a></td>
+											</tr>
+											<tr class="tr-odd">
+												<td>05</td>
+												<td>监控五</td>
+												<td><a class="del-btn">删除</a></td>
+											</tr>
+											<tr>
+												<td>04</td>
+												<td>监控四</td>
+												<td><a class="del-btn">删除</a></td>
+											</tr>
+											<tr class="tr-odd">
+												<td>05</td>
+												<td>监控五</td>
+												<td><a class="del-btn">删除</a></td>
+											</tr>
+											<tr>
+												<td>04</td>
+												<td>监控四</td>
+												<td><a class="del-btn">删除</a></td>
+											</tr>
+											<tr class="tr-odd">
+												<td>05</td>
+												<td>监控五</td>
+												<td><a class="del-btn">删除</a></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="add-d-block"><i class="fa fa-plus-circle"></i>增加</div>
+				<div class="add-down-right">
+					<div class="add-d-ul"><a class="add-d-items">摄像头</a></div>
+					<div class="add-d-con" style="display: block;">
+						<div class="add-d-table">
+							<div class="add-d-thead">
+								<table>
+									<thead>
+										<tr>
+											<th width="30%">序号</th>
+											<th width="40%">监控名称</th>
+											<th width="30%">操作</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+							<div class="add-d-tbody">
+								<table>
+									<tbody>
+										<tr class="tr-odd">
+											<td width="30%">01</td>
+											<td width="40%">监控一</td>
+											<td width="30%"><a class="del-btn">删除</a></td>
+										</tr>
+										<tr>
+											<td>02</td>
+											<td>监控二</td>
+											<td><a class="del-btn">删除</a></td>
+										</tr>
+										<tr class="tr-odd">
+											<td>03</td>
+											<td>监控三</td>
+											<td><a class="del-btn">删除</a></td>
+										</tr>
+										<tr>
+											<td>04</td>
+											<td>监控四</td>
+											<td><a class="del-btn">删除</a></td>
+										</tr>
+										<tr class="tr-odd">
+											<td>05</td>
+											<td>监控五</td>
+											<td><a class="del-btn">删除</a></td>
+										</tr>
+										<tr>
+											<td>04</td>
+											<td>监控四</td>
+											<td><a class="del-btn">删除</a></td>
+										</tr>
+										<tr class="tr-odd">
+											<td>05</td>
+											<td>监控五</td>
+											<td><a class="del-btn">删除</a></td>
+										</tr>
+										<tr>
+											<td>04</td>
+											<td>监控四</td>
+											<td><a class="del-btn">删除</a></td>
+										</tr>
+										<tr class="tr-odd">
+											<td>05</td>
+											<td>监控五</td>
+											<td><a class="del-btn">删除</a></td>
+										</tr>
+										<tr>
+											<td>04</td>
+											<td>监控四</td>
+											<td><a class="del-btn">删除</a></td>
+										</tr>
+										<tr class="tr-odd">
+											<td>05</td>
+											<td>监控五</td>
+											<td><a class="del-btn">删除</a></td>
+										</tr>
+										<tr>
+											<td>04</td>
+											<td>监控四</td>
+											<td><a class="del-btn">删除</a></td>
+										</tr>
+										<tr class="tr-odd">
+											<td>05</td>
+											<td>监控五</td>
+											<td><a class="del-btn">删除</a></td>
+										</tr>
+										<tr>
+											<td>04</td>
+											<td>监控四</td>
+											<td><a class="del-btn">删除</a></td>
+										</tr>
+										<tr class="tr-odd">
+											<td>05</td>
+											<td>监控五</td>
+											<td><a class="del-btn">删除</a></td>
+										</tr>
+										<tr>
+											<td>04</td>
+											<td>监控四</td>
+											<td><a class="del-btn">删除</a></td>
+										</tr>
+										<tr class="tr-odd">
+											<td>05</td>
+											<td>监控五</td>
+											<td><a class="del-btn">删除</a></td>
+										</tr>
+										<tr>
+											<td>04</td>
+											<td>监控四</td>
+											<td><a class="del-btn">删除</a></td>
+										</tr>
+										<tr class="tr-odd">
+											<td>05</td>
+											<td>监控五</td>
+											<td><a class="del-btn">删除</a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="add-s-foot">
+				<a class="sure-btn">确定</a>
+				<a class="cancel-btn">取消</a>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/ztree/js/jquery.ztree.core.js"></script>
+	<script type="text/javascript" src="../js/jeDate/jquery.jedate.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var zTreeObj1;
+			// zTree 的参数配置，深入使用请参考 API 文档（setting 配置详解）
+			var setting1 = {
+	    		view: {
+		    		showIcon: false,
+		    		showLine: false
+		    	}
+		    };
+		    // zTree 的数据属性，深入使用请参考 API 文档（zTreeNode 节点数据详解）
+		    var zNodes1 = [
+		    	{name:"数据项配置", open:true, children:[
+		       		{name:"基本信息", open:false,children:[
+			       		{name:"基本信息1"},
+			       		{name:"基本信息2"},
+			       		{name:"基本信息3"},
+			       		{name:"基本信息4"},
+			       		{name:"基本信息5"},
+			       		{name:"基本信息6"},
+			       	]}, 
+		       		{name:"家庭情况", open:false,children:[
+			       		{name:"家庭情况1"},
+			       		{name:"家庭情况2"},
+			       		{name:"家庭情况3"},
+			       		{name:"家庭情况4"},
+			       		{name:"家庭情况5"},
+			       		{name:"家庭情况6"},
+			       	]},
+			       	{name:"看守所羁押表现", open:false,children:[
+			       		{name:"看守所羁押表现1"},
+			       		{name:"看守所羁押表现2"},
+			       		{name:"看守所羁押表现3"},
+			       		{name:"看守所羁押表现4"},
+			       		{name:"看守所羁押表现5"},
+			       		{name:"看守所羁押表现6"},
+			       	]},
+		       		{name:"犯罪基本情况", open:false, children:[
+			       		{name:"罪名"}, 
+			       		{name:"犯罪动机"},
+			       		{name:"作案时间"}, 
+			       		{name:"作案手段"},
+			       		{name:"作案工具"}, 
+			       		{name:"服务器状态"},
+			       		{name:"业务配置"}, 
+			       		{name:"服务器参数监测"},
+			       		{name:"数据字典测试"},
+			       		{name:"日志管理"},
+			       		{name:"当前审核状态"}
+			       	]}
+		       	]}
+		    ];
+		    $(document).ready(function(){
+		        zTreeObj1 = $.fn.zTree.init($("#itemmenu3"), setting1, zNodes1);
+		        zTreeObj1 = $.fn.zTree.init($("#itemmenu4"), setting1, zNodes1);
+		    });
+		});
+
+		$(".add-d-ul ul li").click(function(){
+			$(this).addClass("add-d-in").siblings().removeClass("add-d-in");
+			$("."+$(this).attr("_content")).show().siblings(".add-d-con").hide();
+		});
+
+		$("#dateinfo1").jeDate({
+			isinitVal:true, 
+			format:"hh:mm:ss",
+			isinitVal:true,
+			isTime:true, //isClear:false,
+			okfun:function(val){}
+		});
+		
+		$("#start-text").blur(function(){
+			var opt = $(this).val();
+
+			var addCenter = $(this).parents(".add-s-up").next(".add-s-center");
+			var addDown = $(this).parents(".add-s-up").next().next(".add-s-down");
+			var addLR = addDown.find(".add-down-left, .add-down-right");
+			
+			if(opt == "自动启动"){
+				addCenter.fadeOut();				
+				addDown.animate({height:"488px"},300);
+				addLR.animate({height:"436px"},300);
+				addDown.find(".add-d-block").animate({paddingTop: "13rem"},300);
+				addDown.find(".add-d-con").animate({height:"396px"});
+				addDown.find(".add-d-tree").animate({height:"350px"});
+				addDown.find(".add-d-table").animate({height:"400px"});
+				addDown.find(".add-d-tbody").animate({height:"344px"});
+				addDown.find(".add-d-table1").animate({height:"350px"});
+				addDown.find(".add-d-tbody1").animate({height:"312px"});
+			}else {
+				addCenter.fadeIn();
+				addDown.animate({height:"360px"},300);
+				addLR.animate({height:"308px"},300);
+				addDown.find(".add-d-con").animate({height:"270px"});
+				addDown.find(".add-d-block").animate({paddingTop: "9rem"},300);
+				addDown.find(".add-d-tree").animate({height:"234px"});
+				addDown.find(".add-d-table").animate({height:"266px"});
+				addDown.find(".add-d-tbody").animate({height:"226px"});
+				addDown.find(".add-d-table1").animate({height:"230px"});
+				addDown.find(".add-d-tbody1").animate({height:"190px"});
+			}
+		});
+	</script>
+</body>
+</html>

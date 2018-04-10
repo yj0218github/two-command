@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>调度中心-页面</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../font-awesome-4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="block-md">
+					<div class="box-title">监狱管理局</div>
+					<p>指挥长：董东日</p>
+					<p>值班长：张三</p>
+					<p>监控监控岗：李四</p>
+					<p>信息研判岗：王五</p>
+					<p>技术维护岗：赵六</p>
+				</div>
+				<div class="block-md">
+					<div class="box-title">民警信息</div>
+					<div id="mjinfoCharts"></div>
+					<div class="mj-info">
+						<p>全省在编民警：<span class="blue-text">19788</span>人</p>
+						<p>监内执勤民警：<span class="yellow-text">5353</span>人</p>
+						<p>集中备勤民警：<span class="green-text">3569</span>人</p>
+					</div>
+				</div>
+				<div class="block-md2">
+					<div class="box-title">监狱值班信息</div>
+					<div class="zb-list">
+						<div class="zb-tab">
+							<div class="zb-thead">
+								<table>
+									<thead>
+										<tr>
+											<th width="40%">单位名称</th>
+											<th width="30%">值班领导</th>
+											<th width="30%">执勤警力</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+							<div class="zb-tbody" id="tab">
+								<div id="tab1">
+									<table>
+										<tbody>
+											<tr class="tr-odd">
+												<td width="40%">崇州监狱</td>
+												<td width="30%">张大大</td>
+												<td width="30%" class="org-text">156</td>
+											</tr>
+											<tr>
+												<td>崇州监狱</td>
+												<td>张大大</td>
+												<td class="org-text">156</td>
+											</tr>
+											<tr class="tr-odd">
+												<td>崇州监狱</td>
+												<td>张大大</td>
+												<td class="org-text">156</td>
+											</tr>
+											<tr>
+												<td>崇州监狱</td>
+												<td>张大大</td>
+												<td class="org-text">156</td>
+											</tr>
+											<tr class="tr-odd">
+												<td>崇州监狱</td>
+												<td>张大大</td>
+												<td class="org-text">156</td>
+											</tr>
+											<tr>
+												<td>崇州监狱</td>
+												<td>张大大</td>
+												<td class="org-text">156</td>
+											</tr>
+											<tr class="tr-odd">
+												<td>崇州监狱</td>
+												<td>张大大</td>
+												<td class="org-text">156</td>
+											</tr>
+											<tr>
+												<td>崇州监狱</td>
+												<td>张大大</td>
+												<td class="org-text">156</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div id="tab2"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="layer-header">
+					<img src="../images/sc_logo.png" alt="logo">
+				</div>
+				<div class="block-md8">
+					<div class="box-title">监狱概况说明</div>
+					<div class="dd-map" onclick=""></div>
+					<a class="screen full-screen"></a>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="block-md">
+					<div class="box-title">监狱概况说明</div>
+					<div class="prison-info">
+						<ul>
+							<li>
+								监狱：<span class="org-text">40个</span>
+							</li>
+							<li>
+								监区：<span class="org-text">209个</span>
+							</li>
+							<li>
+								关押点：<span class="org-text">20个</span>
+							</li>
+						</ul>
+					</div>
+					<div id="prisonGeneral"></div>
+				</div>
+				<div class="block-md">
+					<div class="box-title">全省监狱犯情统计信息</div>
+					<div id="privincountInfo"></div>
+				</div>
+				<div class="block-md2">
+					<div class="box-title">安防统计信息</div>
+					<div id="anfcountInfo"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/jquery.wheelmenu.js"></script>
+    <script type="text/javascript" src="../js/highcharts.js"></script>
+    <script type="text/javascript" src="https://img.hcharts.cn/highcharts/highcharts-3d.js"></script>
+    <script type="text/javascript" src="../js/exporting.js"></script>
+    <script type="text/javascript" src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			fullScreen();		//全屏切换
+		});
+
+		$('#mjinfoCharts').highcharts({
+	        chart: {
+	            type: 'pie',
+	            backgroundColor: 'rgba(0,0,0,0)',
+	            options3d: {
+	                enabled: true,
+	                alpha: 45,
+	                beta: 0
+	            }
+	        },
+	        credits: {
+	            enabled: false
+	        },
+	        exporting:{
+	        	enabled: false
+	        },
+	        title: {
+	            text: ''
+	        },	        
+	        tooltip: {
+	            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+	        },
+	        legend:{
+	        	enabled: false
+	        },    
+	        plotOptions: {
+	            pie: {
+	                allowPointSelect: true,
+	                cursor: 'pointer',
+	                depth: 30,
+	                dataLabels: {
+	                    enabled: true,
+	                    format: '{point.name}',
+	                    style:{
+	                    	color:"#ffffff",
+	                    	fontSize: "12px",
+		            		textOutline: "0px 0px contrast"
+	                    }
+	                },
+	                events: {
+			            click: function(e) {
+				        	
+				        }
+	            	}
+	            }
+	        },
+	        series: [{
+	            type: 'pie',
+	            name: '民警信息',
+	            colors: ['#0b76e5', '#f2d314', '#48e44d', '#DDDF00', '#24CBE5', '#64E572', '#FF9655','#FFF263', '#6AF9C4'],
+	            data: [
+	            	{name:"全省在编民警",y:19788,url:"mjPop.html"},
+	            	{name:"监内执勤民警",y:5353,url:"mjPop.html"},
+	            	{name:"集中备勤民警",y:3569,url:"mjPop.html"}
+	            ]
+	        }]
+	    });
+
+		$('#prisonGeneral').highcharts({
+	        chart: {
+	            type: 'pie',	            
+	            backgroundColor: 'rgba(0,0,0,0)',
+	            options3d: {
+	                enabled: true,
+	                alpha: 45
+	            }
+	        },
+	        credits: {
+	            enabled: false
+	        },
+	        exporting:{
+	        	enabled: false
+	        },
+	        title: {
+	            text: ''
+	        },
+	        tooltip: {
+			    backgroundColor: 'rgba(12,32,70,0.8)',   // 背景颜色
+			    borderColor: 'rgba(12,32,70,0.9)',         // 边框颜色
+			    borderRadius: 8,             // 边框圆角
+			    borderWidth: 2,               // 边框宽度
+			    shadow: true,                 // 是否显示阴影
+			    animation: true,               // 是否启用动画效果
+			    style: {                      // 文字内容相关样式
+			        color: "#ffffff",
+			        fontSize: "14px"
+			    }
+			},
+	        subtitle: {
+	            text: ''
+	        },
+	        legend: {
+	        	enabled: true
+	        },
+	        plotOptions: {
+	            pie: {
+	                allowPointSelect: true,
+	                cursor: 'pointer',
+	                innerSize: 50,
+	                depth: 30,
+	                dataLabels: {
+	                    enabled: true,
+	                    format: '{point.name}',
+	                    style:{
+	                    	color:"#ffffff",
+	                    	fontSize: "12px",
+		            		textOutline: "0px 0px contrast"
+	                    }
+	                }
+	            }
+	        },
+	        series: [{
+	            colors: ['#0b76e5', '#f2d314', '#48e44d', '#d7362e', '#df8510', '#64E572', '#FF9655','#FFF263', '#6AF9C4'],
+	            // showInLegend: true,
+	            data: [
+	                ['本月释放', 82],
+	                ['本月收押', 23],
+	                ['本月假释', 13],
+	                ['本月监外', 65],
+	                ['本月离监探亲', 58]
+	            ]
+	        }]
+	    });
+		
+		$("#anfcountInfo").highcharts({
+			chart: {
+	            renderTo: 'container',
+	            type: 'column',
+	            backgroundColor: "rgba(0,0,0,0)",
+	            options3d: {
+	                enabled: true,
+	                alpha: 0,
+	                beta: 0,
+	                depth: 20,
+	                viewDistance: 25
+	            },
+	            spacingTop: 20,
+	            spacingBottom: 10,
+	            spacingLeft: 20,
+	            spacingRight: 20
+	        },
+	        credits: {
+	            enabled: false
+	        },
+	        exporting:{
+	        	enabled: false
+	        },
+	        title: {
+	            text: ''
+	        },
+	        subtitle: {
+	            text: ''
+	        },
+	        legend: {
+	            enabled: false
+	        },
+	        plotOptions: {
+	            column: {
+	                depth: 25
+	            }
+	        },
+	        xAxis: {
+		        categories: ['摄像机', '门禁', '数字电网', '周界震动报警', '周界红外报警','网络报警'],
+		        labels: {
+		        	style:{
+		        		color: '#ffffff',
+		        		fontSize: '14px'
+		        	},
+		        	rotation: -20
+		        },
+		        gridLineWidth: 0
+		    },
+		    yAxis:{
+		    	title: {
+		    		text:''
+		    	},
+		    	labels: {
+		        	style:{
+		        		color: '#ffffff',
+		        		fontSize: '14px'
+		        	}
+		        },
+		        gridLineColor: "#37486c",
+		        gridLineWidth: 2
+		    },
+		    colors: ['#0b76e5'],
+	        series: [{
+	        	name:'',
+	            data: [130,210,260,320,370,240],
+	            dataLabels: {
+	            	align:'top',
+		            enabled: true,
+		            color:"#ded702",
+		            style: {
+		            	fontSize: "12px",
+		            	textOutline: "0px 0px contrast"
+		            }
+		        }
+	        }]
+		});
+
+		$("#privincountInfo").highcharts({
+			chart: {
+	            renderTo: 'container',
+	            type: 'column',
+	            backgroundColor: "rgba(0,0,0,0)",
+	            options3d: {
+	                enabled: true,
+	                alpha: 0,
+	                beta: 0,
+	                depth: 20,
+	                viewDistance: 25
+	            },
+	            spacingTop: 20,
+	            spacingBottom: 10,
+	            spacingLeft: 20,
+	            spacingRight: 20
+	        },
+	        credits: {
+	            enabled: false
+	        },
+	        exporting:{
+	        	enabled: false
+	        },
+	        title: {
+	            text: ''
+	        },
+	        subtitle: {
+	            text: ''
+	        },
+	        legend: {
+	            enabled: false
+	        },
+	        plotOptions: {
+	            column: {
+	                depth: 25
+	            }
+	        },
+	        xAxis: {
+		        categories: ['重点关注罪犯', '职务犯', '金融犯', '涉黑犯', '老病残罪犯','准予监外执行犯'],
+		        labels: {
+		        	style:{
+		        		color: '#ffffff',
+		        		fontSize: '14px'
+		        	},
+		        	rotation: -20
+		        },
+		        gridLineWidth: 0
+		    },
+		    yAxis:{
+		    	title: {
+		    		text:''
+		    	},
+		    	labels: {
+		        	style:{
+		        		color: '#ffffff',
+		        		fontSize: '14px'
+		        	}
+		        },
+		        gridLineColor: "#37486c",
+		        gridLineWidth: 2
+		    },
+		    colors: ['#0b76e5'],
+	        series: [{
+	        	name:'',
+	            data: [{y:130,color: "#0D83FC"},{y:210,color: "#ea9625"},{y:260,color: "#f4453b"}, {y:320,color: "#04ba66"},{y:300,color: "#d6a501"}],
+	            dataLabels: {
+	            	align:'top',
+		            enabled: true,
+		            color:"#ded702",
+		            style: {
+		            	fontSize: "12px",
+		            	textOutline: "0px 0px contrast"
+		            }
+		        }
+	        }]
+		});
+
+		function fullScreen(){
+			$(".screen").click(function(){
+				if(!$(this).hasClass("full-screen")){
+					$(this).addClass("full-screen").removeClass("small-screen");	
+					$(this).parent(".block-md8").prev(".layer-header").fadeIn();
+					$(this).parent(".block-md8").css("height","54.2rem");
+					$(".col-md-3").fadeIn();
+					$(this).parents(".col-md-12").attr("class","col-md-6");
+				}else {
+					$(this).addClass("small-screen").removeClass("full-screen");
+					$(this).parent(".block-md8").prev(".layer-header").fadeOut();
+					$(this).parent(".block-md8").css("height","61.2rem");
+					$(".col-md-3").fadeOut("slow");
+					$(this).parents(".col-md-6").attr("class","col-md-12");
+				}
+			});
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>应用中心-要情日报页面</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/apply_center.css" />
+	<link rel="stylesheet" type="text/css" href="../css/apply_c_block.css" />
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="../js/jedate/skin/jedate.css" />
+</head>
+<body>
+	<div class="apply-nav-con">
+		<div class="daily-con">
+			<div class="sear-btns clearfix">
+				<div class="sear-btns-left">
+					<a class="blue-big-btn" href="javascript:void(0);">修改提交</a>
+					<a class="org-btn" href="javascript:void(0);">删除</a>
+				</div>
+				<div class="time-search">
+					<input class="input-w1" id="dateinfo5" type="text" placeholder="请选择日期"  readonly>
+					<a class="time-sear-btn" href="javascript:void(0);">查询</a>
+					<a class="new-btn" href="javascript:void(0);">生成最新</a>
+				</div>
+			</div>
+			<div class="daily-container" id="daily-container">
+				<a href="javascript:void(0);" class="blue-small-btn">打印</a>
+				<a href="javascript:void(0);" class="org-small-btn">导出</a>
+				<div class="daily-main">
+					<div class="daily-content">
+						<h3>指挥中心要情日报</h3>
+						<p>时间：2017-11-01&nbsp;&nbsp;&nbsp;&nbsp;生成人：超级管理员</p>
+						<table class="daily-tab">
+							<tr>
+								<td width="25%" class="td-fw-r"><input type="text" name="" class="td-input" value="监狱押犯概况" /></td>
+								<td width="75%"><textarea class="td-textarea">截止今日6点，监狱在册罪犯8739名，较昨日6名，实际在押8640名，较昨日6名。其中暂予监外执行20名，解回再审75名（含特情借用3名），在逃4名。</textarea></td>
+							</tr>
+							<tr>
+								<td class="td-fw-r"><input type="text" name="" class="td-input" value="罪犯进出大门情况" /></td>
+								<td><textarea class="td-textarea">从昨日6时至今日6时，罪犯出监狱大门6人次，其中刑满6人次。罪犯进监狱大门0人次</textarea></td>
+							</tr>
+							<tr>
+								<td class="td-fw-r"><input type="text" name="" class="td-input" value="外来人员车辆进出大门情况" /></td>
+								<td width="75%"><textarea class="td-textarea">从昨日6时至今日6时，外来人员进出32人次，车辆进出17人次，情况正常</textarea></td>
+							</tr>
+							<tr>
+								<td class="td-fw-r"><input type="text" name="" class="td-input" value="安防设施运行情况" /></td>
+								<td><textarea class="td-textarea">正常</textarea></td>
+							</tr>
+							<tr>
+								<td class="td-fw-r"><input type="text" name="" class="td-input" value="罪犯违法违纪情况" /></td>
+								<td><textarea class="td-textarea">无</textarea></td>
+							</tr>
+							<tr>
+								<td class="td-fw-r"><input type="text" name="" class="td-input" value="重大活动情况" /></td>
+								<td><textarea class="td-textarea">无</textarea></td>
+							</tr>
+							<tr>
+								<td class="td-fw-r"><input type="text" name="" class="td-input" value="其他情况" /></td>
+								<td><textarea class="td-textarea">无</textarea></td>
+							</tr>
+							<tr>
+								<td class="td-fw-r"><input type="text" name="" class="td-input" value="其他情况" /></td>
+								<td><textarea class="td-textarea">无</textarea></td>
+							</tr>
+							<tr>
+								<td class="td-fw-r"><input type="text" name="" class="td-input" value="其他情况" /></td>
+								<td><textarea class="td-textarea">无</textarea></td>
+							</tr>
+							<tr>
+								<td class="td-fw-r"><input type="text" name="" class="td-input" value="其他情况" /></td>
+								<td><textarea class="td-textarea">无</textarea></td>
+							</tr>
+							<tr>
+								<td class="td-fw-r"><input type="text" name="" class="td-input" value="其他情况" /></td>
+								<td><textarea class="td-textarea">无</textarea></td>
+							</tr>
+							<tr>
+								<td class="td-fw-r"><input type="text" name="" class="td-input" value="其他情况" /></td>
+								<td><textarea class="td-textarea">无</textarea></td>
+							</tr>
+							<tr>
+								<td class="td-fw-r"><input type="text" name="" class="td-input" value="其他情况" /></td>
+								<td><textarea class="td-textarea">无</textarea></td>
+							</tr>
+							<tr>
+								<td class="td-fw-r"><input type="text" name="" class="td-input" value="其他情况" /></td>
+								<td><textarea class="td-textarea">无</textarea></td>
+							</tr>
+						</table>
+					</div>						
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/jeDate/jquery.jedate.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#dateinfo5").jeDate({
+				isinitVal:true,
+				format:"YYYY-MM-DD",
+				isinitVal:true,
+				isTime:true, //isClear:false,
+				okfun:function(val){}
+			});
+		});
+	</script>
+</body>
+</html>

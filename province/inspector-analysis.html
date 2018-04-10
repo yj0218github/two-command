@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>应用中心-督查分析页面</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/apply_center.css" />
+	<link rel="stylesheet" type="text/css" href="../css/apply_c_block.css" />
+</head>
+<body>
+	<div class="wrap-content">
+		<div class="toggle-con">
+			<ul class="toggle-date clearfix">
+				<li class="date-active">月</li>
+				<li>季</li>
+				<li>年</li>
+			</ul>
+			<div class="ins-title2"><p>好的方面：23&nbsp;&nbsp;&nbsp;整改方面：15&nbsp;&nbsp;&nbsp;上报总数：10</p></div>
+		</div>
+		<div class="inspector-up">
+			<div class="inspector-up-left">
+				<div class="apply-title">各类型统计</div>
+				<div id="styleStatistics"></div>
+			</div>
+			<div class="inspector-up-left">
+				<div class="apply-title">工作检查类型</div>
+				<div id="workCheckType"></div>
+			</div>
+			<div class="inspector-up-left2">
+				<div class="apply-title">相关数量</div>
+				<div id="relativeAmount"></div>
+			</div>
+		</div>
+		<div class="inspector-down">
+			<div class="inspector-down-left">
+				<div class="apply-title">人员督查上报</div>
+				<div id="peopleInsAppear"></div>
+			</div>
+			<div class="inspector-down-left">
+				<div class="apply-title">常见事发地</div>
+				<div id="commonSite"></div>
+			</div>
+			<div class="inspector-down-left2">
+				<div class="apply-title">最近上报情况</div>
+				<div class="inspector-tab">
+					<div class="dl-thead">
+						<table>
+							<tr>
+								<th width="30%">时间</th>
+								<th width="15%">监区</th>
+								<th width="15%">执勤区</th>
+								<th width="25%">内容</th>
+								<th width="15%">详情</th>
+							</tr>
+						</table>
+					</div>
+					<div class="dl-tbody">
+						<table>
+							<tr class="dl-tr-odd">
+								<td width="30%">2018-03-22 12:12:12</td>
+								<td width="15%">一监区</td>
+								<td width="15%">民警执勤区</td>
+								<td width="25%"><p class="p-space" title="控制台无民警执勤控制台无民警执勤">控制台无民警执勤控制台无民警执勤</p></td>
+								<td width="15%"><a class="org-btn">详情</a></td>
+							</tr>
+							<tr>
+								<td>2018-03-22 12:12:12</td>
+								<td>一监区</td>
+								<td>民警执勤区</td>
+								<td><p class="p-space" title="控制台无民警执勤控制台无民警执勤">控制台无民警执勤控制台无民警执勤</p></td>
+								<td><a class="org-btn">详情</a></td>
+							</tr>
+							<tr class="dl-tr-odd">
+								<td>2018-03-22 12:12:12</td>
+								<td>一监区</td>
+								<td>民警执勤区</td>
+								<td><p class="p-space" title="控制台无民警执勤控制台无民警执勤">控制台无民警执勤控制台无民警执勤</p></td>
+								<td><a class="org-btn">详情</a></td>
+							</tr>
+							<tr>
+								<td>2018-03-22 12:12:12</td>
+								<td>一监区</td>
+								<td>民警执勤区</td>
+								<td><p class="p-space" title="控制台无民警执勤控制台无民警执勤">控制台无民警执勤控制台无民警执勤</p></td>
+								<td><a class="org-btn">详情</a></td>
+							</tr>
+							<tr class="dl-tr-odd">
+								<td>2018-03-22 12:12:12</td>
+								<td>一监区</td>
+								<td>民警执勤区</td>
+								<td><p class="p-space" title="控制台无民警执勤控制台无民警执勤">控制台无民警执勤控制台无民警执勤</p></td>
+								<td><a class="org-btn">详情</a></td>
+							</tr>
+							<tr>
+								<td>2018-03-22 12:12:12</td>
+								<td>一监区</td>
+								<td>民警执勤区</td>
+								<td><p class="p-space" title="控制台无民警执勤控制台无民警执勤">控制台无民警执勤控制台无民警执勤</p></td>
+								<td><a class="org-btn">详情</a></td>
+							</tr>
+							<tr class="dl-tr-odd">
+								<td>2018-03-22 12:12:12</td>
+								<td>一监区</td>
+								<td>民警执勤区</td>
+								<td><p class="p-space" title="控制台无民警执勤控制台无民警执勤">控制台无民警执勤控制台无民警执勤</p></td>
+								<td><a class="org-btn">详情</a></td>
+							</tr>
+							<tr>
+								<td>2018-03-22 12:12:12</td>
+								<td>一监区</td>
+								<td>民警执勤区</td>
+								<td><p class="p-space" title="控制台无民警执勤控制台无民警执勤">控制台无民警执勤控制台无民警执勤</p></td>
+								<td><a class="org-btn">详情</a></td>
+							</tr>
+							<tr class="dl-tr-odd">
+								<td>2018-03-22 12:12:12</td>
+								<td>一监区</td>
+								<td>民警执勤区</td>
+								<td><p class="p-space" title="控制台无民警执勤控制台无民警执勤">控制台无民警执勤控制台无民警执勤</p></td>
+								<td><a class="org-btn">详情</a></td>
+							</tr>
+							<tr>
+								<td>2018-03-22 12:12:12</td>
+								<td>一监区</td>
+								<td>民警执勤区</td>
+								<td><p class="p-space" title="控制台无民警执勤控制台无民警执勤">控制台无民警执勤控制台无民警执勤</p></td>
+								<td><a class="org-btn">详情</a></td>
+							</tr>
+							<tr class="dl-tr-odd">
+								<td>2018-03-22 12:12:12</td>
+								<td>一监区</td>
+								<td>民警执勤区</td>
+								<td><p class="p-space" title="控制台无民警执勤控制台无民警执勤">控制台无民警执勤控制台无民警执勤</p></td>
+								<td><a class="org-btn">详情</a></td>
+							</tr>
+							<tr>
+								<td>2018-03-22 12:12:12</td>
+								<td>一监区</td>
+								<td>民警执勤区</td>
+								<td><p class="p-space" title="控制台无民警执勤控制台无民警执勤">控制台无民警执勤控制台无民警执勤</p></td>
+								<td><a class="org-btn">详情</a></td>
+							</tr>
+							<tr class="dl-tr-odd">
+								<td>2018-03-22 12:12:12</td>
+								<td>一监区</td>
+								<td>民警执勤区</td>
+								<td><p class="p-space" title="控制台无民警执勤控制台无民警执勤">控制台无民警执勤控制台无民警执勤</p></td>
+								<td><a class="org-btn">详情</a></td>
+							</tr>
+							<tr>
+								<td>2018-03-22 12:12:12</td>
+								<td>一监区</td>
+								<td>民警执勤区</td>
+								<td><p class="p-space" title="控制台无民警执勤控制台无民警执勤">控制台无民警执勤控制台无民警执勤</p></td>
+								<td><a class="org-btn">详情</a></td>
+							</tr>
+							<tr class="dl-tr-odd">
+								<td>2018-03-22 12:12:12</td>
+								<td>一监区</td>
+								<td>民警执勤区</td>
+								<td><p class="p-space" title="控制台无民警执勤控制台无民警执勤">控制台无民警执勤控制台无民警执勤</p></td>
+								<td><a class="org-btn">详情</a></td>
+							</tr>
+							<tr>
+								<td>2018-03-22 12:12:12</td>
+								<td>一监区</td>
+								<td>民警执勤区</td>
+								<td><p class="p-space" title="控制台无民警执勤控制台无民警执勤">控制台无民警执勤控制台无民警执勤</p></td>
+								<td><a class="org-btn">详情</a></td>
+							</tr>
+							<tr class="dl-tr-odd">
+								<td>2018-03-22 12:12:12</td>
+								<td>一监区</td>
+								<td>民警执勤区</td>
+								<td><p class="p-space" title="控制台无民警执勤控制台无民警执勤">控制台无民警执勤控制台无民警执勤</p></td>
+								<td><a class="org-btn">详情</a></td>
+							</tr>
+							<tr>
+								<td>2018-03-22 12:12:12</td>
+								<td>一监区</td>
+								<td>民警执勤区</td>
+								<td><p class="p-space" title="控制台无民警执勤控制台无民警执勤">控制台无民警执勤控制台无民警执勤</p></td>
+								<td><a class="org-btn">详情</a></td>
+							</tr>
+							<tr class="dl-tr-odd">
+								<td>2018-03-22 12:12:12</td>
+								<td>一监区</td>
+								<td>民警执勤区</td>
+								<td><p class="p-space" title="控制台无民警执勤控制台无民警执勤">控制台无民警执勤控制台无民警执勤</p></td>
+								<td><a class="org-btn">详情</a></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/highcharts.js"></script>
+    <script type="text/javascript" src="../js/highcharts-3d.js"></script>
+    <script type="text/javascript" src="../js/exporting.js"></script>
+    <script type="text/javascript" src="../js/highcharts-zh_CN.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			styleStatistics();		//各类型统计
+			workCheckType();		//工作检查类型
+			relativeAmount();		//相关数量
+			peopleInsAppear();		//人员督查上报
+			commonSite();			//常见事发地
+			idownConSize();		//获取下半部分高度
+		});
+
+		function styleStatistics(){
+			$('#styleStatistics').highcharts({
+		        chart: {
+		            type: 'pie',
+		            backgroundColor: 'rgba(0,0,0,0)',
+		            options3d: {
+		                enabled: true,
+		                alpha: 60,
+		                beta: 0
+		            },
+		            spacingTop: 0,
+		            spacingBottom: 20,
+		            spacingLeft: 10,
+		            spacingRight: 10
+		        },
+		        credits: {
+		            enabled: false
+		        },
+		        exporting:{
+		        	enabled: false
+		        },
+		        title: {
+		            text: ''
+		        },	        
+		        tooltip: {
+		            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+		        },
+		        legend:{
+		        	enabled: true,
+		        	align:'right',
+		        	verticalAlign:'top',
+		        	symbolRadius: 0,
+		        	itemStyle:{
+		        		color:'#ffffff'
+		        	},
+		        	itemHoverStyle:{
+		        		color:'#ffffff'
+		        	},
+		        	itemHiddenStyle:{
+		        		color:'#999999'
+		        	}
+		        },    
+		        plotOptions: {
+		            pie: {
+		                allowPointSelect: true,
+		                cursor: 'pointer',
+		                depth: 30,
+		                dataLabels: {
+		                    enabled: true,
+		                    format: '{point.name}',
+		                    style:{
+		                    	color:"#ffffff",
+		                    	fontSize: "12px",
+			            		textOutline: "0px 0px contrast"
+		                    }
+		                },
+		                showInLegend: true
+		            }
+		        },
+		        series: [{
+		            type: 'pie',
+		            name: '各类型统计',
+		            colors: ['#0b76e5', '#f2d314', '#48e44d', '#DDDF00', '#24CBE5', '#64E572', '#FF9655','#FFF263', '#6AF9C4'],
+		            data: [
+		            	{name:"一监区",y:78},
+		            	{name:"二监区",y:53},
+		            	{name:"三监区",y:69}
+		            ]
+		        }]
+		    });
+		}
+
+		function workCheckType(){
+			$('#workCheckType').highcharts({
+		        chart: {
+		            type: 'pie',
+		            backgroundColor: 'rgba(0,0,0,0)',
+		            options3d: {
+		                enabled: true,
+		                alpha: 60,
+		                beta: 0
+		            },
+		            spacingTop: 0,
+		            spacingBottom: 20,
+		            spacingLeft: 10,
+		            spacingRight: 10
+		        },
+		        credits: {
+		            enabled: false
+		        },
+		        exporting:{
+		        	enabled: false
+		        },
+		        title: {
+		            text: ''
+		        },	        
+		        tooltip: {
+		            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+		        },
+		        legend:{
+		        	enabled: true,
+		        	align:'right',
+		        	verticalAlign:'top',
+		        	symbolRadius: 0,
+		        	itemStyle:{
+		        		color:'#ffffff'
+		        	},
+		        	itemHoverStyle:{
+		        		color:'#ffffff'
+		        	},
+		        	itemHiddenStyle:{
+		        		color:'#999999'
+		        	}
+		        },     
+		        plotOptions: {
+		            pie: {
+		                allowPointSelect: true,
+		                cursor: 'pointer',
+		                depth: 30,
+		                dataLabels: {
+		                    enabled: true,
+		                    format: '{point.name}',
+		                    style:{
+		                    	color:"#ffffff",
+		                    	fontSize: "12px",
+			            		textOutline: "0px 0px contrast"
+		                    }
+		                },
+		                showInLegend: true
+		            }
+		        },
+		        series: [{
+		            type: 'pie',
+		            name: '各类型统计',
+		            colors: ['#0b76e5', '#f2d314', '#48e44d', '#DDDF00', '#24CBE5', '#64E572', '#FF9655','#FFF263', '#6AF9C4'],
+		            data: [
+		            	{name:"一监区",y:88},
+		            	{name:"二监区",y:53},
+		            	{name:"三监区",y:35}
+		            ]
+		        }]
+		    });
+		}
+
+		function relativeAmount(){
+			var colors = ['#0193fd', '#fc8e34','#faaa28','#0b76e5', '#f2d314', '#48e44d', '#DDDF00', '#24CBE5', '#64E572', '#FF9655','#FFF263', '#6AF9C4'];
+	    	Highcharts.getOptions().colors = Highcharts.map(colors, function (color) {
+	             return {
+	                 linearGradient: { x1: 0, y1: 1, x2: -1, y2: -1 },  
+	                 stops: [[0, color], [1, Highcharts.Color(color).brighten(14).get('rgba')] // brighten(14)数值为负值，则颜色加深，正值变浅
+	                 ]
+	             };  
+	         });
+			$("#relativeAmount").highcharts({
+				chart: {
+		            renderTo: 'container',
+		            type: 'column',
+		            backgroundColor: "rgba(0,0,0,0)",
+		            options3d: {
+		                enabled: true,
+		                alpha: 0,
+		                beta: 0,
+		                depth: 20,
+		                viewDistance: 25
+		            },
+		            spacingTop: 20,
+		            spacingBottom: 0,
+		            spacingLeft: 10,
+		            spacingRight: 10
+		        },
+		        credits: {
+		            enabled: false
+		        },
+		        exporting:{
+		        	enabled: false
+		        },
+		        title: {
+		            text: ''
+		        },
+		        subtitle: {
+		            text: ''
+		        },
+		        legend: {
+		            enabled: false
+		        },
+		        plotOptions: {
+		            column: {
+		                depth: 25
+		            }
+		        },
+		        xAxis: {
+			        categories: ['一监区', '二监区', '三监区', '四监区', '五监区','六监区','七监区','八监区','医院','警卫大队'],
+			        labels: {
+			        	style:{
+			        		color: '#ffffff',
+			        		fontSize: '14px'
+			        	},
+			        	rotation: -15
+			        },
+			        gridLineWidth: 0
+			    },
+			    yAxis:{
+			    	title: {
+			    		text:''
+			    	},
+			    	labels: {
+			        	style:{
+			        		color: '#ffffff',
+			        		fontSize: '14px'
+			        	}
+			        },
+			        gridLineColor: "#37486c",
+			        gridLineWidth: 2
+			    },
+		        series: [{
+		        	name:'',
+		            data: [130,210,160,120,200,224,185,112,224,336],
+		            dataLabels: {
+			            enabled: true,
+			            align:'top',
+			            color:"#ded702",
+			            style: {
+			            	fontSize: "12px",
+			            	textOutline: "0px 0px contrast"
+			            }
+			        }
+			    }]
+			});
+		}
+
+		function peopleInsAppear(){
+			var colors = ['#0193fd', '#fc8e34','#faaa28','#0b76e5', '#f2d314', '#48e44d', '#DDDF00', '#24CBE5', '#64E572', '#FF9655','#FFF263', '#6AF9C4'];
+	    	Highcharts.getOptions().colors = Highcharts.map(colors, function (color) {
+	             return {
+	                 linearGradient: { x1: 0, y1: 1, x2: -1, y2: -1 },  
+	                 stops: [[0, color], [1, Highcharts.Color(color).brighten(14).get('rgba')] // brighten(14)数值为负值，则颜色加深，正值变浅
+	                 ]
+	             };  
+	         });
+			$("#peopleInsAppear").highcharts({
+				chart: {
+		            renderTo: 'container',
+		            type: 'column',
+		            backgroundColor: "rgba(0,0,0,0)",
+		            options3d: {
+		                enabled: true,
+		                alpha: 0,
+		                beta: 0,
+		                depth: 20,
+		                viewDistance: 25
+		            },
+		            spacingTop: 20,
+		            spacingBottom: 10,
+		            spacingLeft: 10,
+		            spacingRight: 10
+		        },
+		        credits: {
+		            enabled: false
+		        },
+		        exporting:{
+		        	enabled: false
+		        },
+		        title: {
+		            text: ''
+		        },
+		        subtitle: {
+		            text: ''
+		        },
+		        legend: {
+		            enabled: false
+		        },
+		        plotOptions: {
+		            column: {
+		                depth: 25
+		            }
+		        },
+		        xAxis: {
+			        categories: ['第一名', '第二名', '第三名', '第四名', '第五名'],
+			        labels: {
+			        	style:{
+			        		color: '#ffffff',
+			        		fontSize: '14px'
+			        	},
+			        	rotation: -30
+			        },
+			        gridLineWidth: 0
+			    },
+			    yAxis:{
+			    	title: {
+			    		text:''
+			    	},
+			    	labels: {
+			        	style:{
+			        		color: '#ffffff',
+			        		fontSize: '14px'
+			        	}
+			        },
+			        gridLineColor: "#37486c",
+			        gridLineWidth: 2
+			    },
+		        series: [{
+		        	name:'',
+		            data: [130,210,160,120,200],
+		            dataLabels: {
+			            enabled: true,
+			            align:'top',
+			            color:"#ded702",
+			            style: {
+			            	fontSize: "12px",
+			            	textOutline: "0px 0px contrast"
+			            }
+			        }
+			    },{
+		        	name:'',
+		            data: [230,210,140,204,145],
+		            dataLabels: {
+			            enabled: true,
+			            align:'top',
+			            color:"#ded702",
+			            style: {
+			            	fontSize: "12px",
+			            	textOutline: "0px 0px contrast"
+			            }
+			        }
+			    }]
+			});
+		}
+
+		function commonSite(){
+			var colors = ['#0193fd', '#fc8e34','#faaa28','#0b76e5', '#f2d314', '#48e44d', '#DDDF00', '#24CBE5', '#64E572', '#FF9655','#FFF263', '#6AF9C4'];
+	    	Highcharts.getOptions().colors = Highcharts.map(colors, function (color) {
+	             return {
+	                 linearGradient: { x1: 0, y1: 1, x2: -1, y2: -1 },  
+	                 stops: [[0, color], [1, Highcharts.Color(color).brighten(14).get('rgba')] // brighten(14)数值为负值，则颜色加深，正值变浅
+	                 ]
+	             };  
+	         });
+			$("#commonSite").highcharts({
+				chart: {
+		            renderTo: 'container',
+		            type: 'column',
+		            backgroundColor: "rgba(0,0,0,0)",
+		            options3d: {
+		                enabled: true,
+		                alpha: 0,
+		                beta: 0,
+		                depth: 20,
+		                viewDistance: 25
+		            },
+		            spacingTop: 20,
+		            spacingBottom: 10,
+		            spacingLeft: 10,
+		            spacingRight: 10
+		        },
+		        credits: {
+		            enabled: false
+		        },
+		        exporting:{
+		        	enabled: false
+		        },
+		        title: {
+		            text: ''
+		        },
+		        subtitle: {
+		            text: ''
+		        },
+		        legend: {
+		            enabled: false
+		        },
+		        plotOptions: {
+		            column: {
+		                depth: 25
+		            }
+		        },
+		        xAxis: {
+			        categories: ['一监区', '二监区', '三监区', '四监区', '五监区','六监区','七监区'],
+			        labels: {
+			        	style:{
+			        		color: '#ffffff',
+			        		fontSize: '14px'
+			        	},
+			        	rotation: -30
+			        },
+			        gridLineWidth: 0
+			    },
+			    yAxis:{
+			    	title: {
+			    		text:''
+			    	},
+			    	labels: {
+			        	style:{
+			        		color: '#ffffff',
+			        		fontSize: '14px'
+			        	}
+			        },
+			        gridLineColor: "#37486c",
+			        gridLineWidth: 2
+			    },
+		        series: [{
+		        	name:'',
+		            data: [130,210,160,120,200,224,185],
+		            dataLabels: {
+			            enabled: true,
+			            align:'top',
+			            color:"#ded702",
+			            style: {
+			            	fontSize: "12px",
+			            	textOutline: "0px 0px contrast"
+			            }
+			        }
+			    }]
+			});
+		}
+
+		function idownConSize(){
+			var downCon1 = $(".wrap-content").height();
+			$(".inspector-down").height(downCon1 - 330);
+			var downConHeight1 = $(".inspector-down").height();
+			$(".inspector-down-left, .inspector-down-left2").height(downConHeight1-4);
+			var idownLeftH = $(".inspector-down-left").height();
+			$("#peopleInsAppear, #commonSite").height(idownLeftH-39);
+		}
+	</script>
+</body>
+</html>

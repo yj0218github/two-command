@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>页面切换2</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../font-awesome-4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="../css/pop_style.css" />
+</head>
+<body>
+	<div class="wrapper1">
+		<div class="pop-main clearfix">
+			<div class="pop-right2">
+				<div class="list-block" style="display: block;">
+					<div class="block-items">
+						<div class="block-text">总值班长：张某某</div>
+						<div class="block-text">副值班长：刘某某</div>
+						<div class="block-text">监区执勤：100人,备勤：90人</div>
+						<div class="block-text">科室执勤：90人，备勤：60人</div>
+					</div>
+					<div class="block-charts1">
+						<div id="zqCharts1"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/highcharts.js"></script>
+    <script type="text/javascript" src="https://img.hcharts.cn/highcharts/highcharts-3d.js"></script>
+    <script type="text/javascript" src="../js/exporting.js"></script>
+    <script type="text/javascript" src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+	<script type="text/javascript">
+		$("#zqCharts1").highcharts({
+			chart: {
+	            renderTo: 'container',
+	            type: 'column',
+	            backgroundColor: "rgba(0,0,0,0)",
+	            options3d: {
+	                enabled: true,
+	                alpha: 0,
+	                beta: 0,
+	                depth: 20,
+	                viewDistance: 25
+	            },
+	            spacingTop: 30,
+	            spacingBottom: 0,
+	            spacingLeft: 20,
+	            spacingRight: 0
+	        },
+	        credits: {
+	            enabled: false
+	        },
+	        exporting:{
+	        	enabled: false
+	        },
+	        title: {
+	            text: ''
+	        },
+	        subtitle: {
+	            text: ''
+	        },
+	        legend: {
+	            enabled: false
+	        },
+	        plotOptions: {
+	            column: {
+	            	stacking: 'normal',
+	                depth: 25
+	            }
+	        },
+	        xAxis: {
+		        categories: ['摄像机', '门禁', '数字电网', '周界震动报警', '周界红外报警','网络报警'],
+		        labels: {
+		        	style:{
+		        		color: '#ffffff',
+		        		fontSize: '14px'
+		        	}
+		        },
+		        gridLineWidth: 0
+		    },
+		    yAxis:{
+		    	title: {
+		    		text:''
+		    	},
+		    	labels: {
+		        	style:{
+		        		color: '#ffffff',
+		        		fontSize: '14px'
+		        	}
+		        },
+		        gridLineColor: "#37486c",
+		        gridLineWidth: 2
+		    },
+		    colors: ['#f4bc2c','#0b76e5'],
+	        series: [{
+	        	name:'执勤',
+	            data: [130,210,260,320,370,240],
+	            dataLabels: {
+	            	align:'top',
+		            enabled: true,
+		            color:"#ffffff",
+		            style: {
+		            	fontSize: "12px",
+		            	textOutline: "0px 0px contrast"
+		            }
+		        }
+	        },{
+	        	name:'备勤',
+	            data: [50,110,160,220,270,150],
+	            dataLabels: {
+	            	align:'top',
+		            enabled: true,
+		            color:"#ffffff",
+		            style: {
+		            	fontSize: "12px",
+		            	textOutline: "0px 0px contrast"
+		            }
+		        }
+        	}]
+		});
+	</script>
+</body>
+</html>
