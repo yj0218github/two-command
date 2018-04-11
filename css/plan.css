@@ -1,0 +1,327 @@
+@charset "utf-8";
+
+html,body {
+	width: 100%;
+	height: 100%;
+}
+body {
+	background: url(../images/background.png) no-repeat;
+}
+/*页面总体布局*/
+	.plan-container {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		min-width: 1366px;
+		overflow-x: auto;
+		overflow-y: hidden;
+	}
+	.plan-head {
+		position: relative;
+		height: 100px;
+		margin-left: 30px;
+		padding-top: 20px;
+	}
+	.plan-middle {
+		position: relative;
+		margin: 0 30px;
+		overflow: hidden;
+	}
+	.plan-foot {
+		position: relative;
+		width: 100%;
+		height: 100px;
+		overflow: hidden;
+	}
+
+/*底部按钮样式*/
+	.plan-foot .pbtn {
+		width: 400px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.p-sure-btn, .p-close-btn {
+		display: inline-block;
+		width: 130px;
+		height: 38px;
+		line-height: 38px;
+		text-align: center;
+		color: #ffffff;
+		font-size: 16px;
+		border-radius: 4px;
+		margin: 30px;
+		cursor: pointer;
+	}
+	.p-sure-btn:hover, .p-close-btn:hover {
+		color: #ffffff;
+	}
+	.p-sure-btn {
+		background: linear-gradient(to bottom, #0a99ed, #0476e3);
+		background: -webkit-gradient(linear,0 0,0 100%, from(#0a99ed), to(#0476e3));
+		background: -moz-linear-gradient(#0a99ed, #0476e3);
+		background: -ms--gradient(#0a99ed, #0476e3);
+		border-top: 1px solid #6dc3f4;
+		border-bottom: 1px solid #0476e3;
+	}
+	.p-close-btn {
+		background: linear-gradient(to bottom, #ffb51a, #ff980d);
+		background: -webkit-gradient(linear,0 0,0 100%, from(#ffb51a), to(#ff980d));
+		background: -moz-linear-gradient(#ffb51a, #ff980d);
+		background: -ms--gradient(#ffb51a, #ff980d);
+		border-top: 1px solid #ffd376;
+		border-bottom: 1px solid #bb6f09;
+	}
+/*中间内容样式*/
+	.plan-left {
+		position: relative;
+		width: 612px;
+		padding: 15px;
+		float: left;
+		background: rgba(10,38,88,0.5);
+		border: 1px solid #415481;
+	}
+	.plan-right {
+		position: relative;
+		margin-left: 662px;
+		min-width: 612px;
+		padding: 15px;
+		background: rgba(10,38,88,0.5);
+		border: 1px solid #415481;
+	}
+	/*.plan-left, .plan-right {
+		position: relative;
+		float: left;
+		background: rgba(10,38,88,0.5);
+		border: 1px solid #415481;
+	}*/
+	.plan-left {
+		margin-right: 20px;
+	}
+
+	.p-left-up {
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+	}
+	.t-textarea {
+		width: 480px;
+		height: 80px;
+		color: #ffffff;
+		border-radius: 5px;
+		background: #0d3070;
+		border: none;
+		outline: none;
+		resize: none;
+	}
+	.p-left-up .input-label, .p-left-up .input-text {
+		margin-bottom: 10px;
+	}
+	.p-left-down {
+		position: relative;
+		width: 100%;
+		background-color: #0d3070;
+	}
+	.pl-dul {
+		width: 100%;
+		height: 38px;
+		background-color: #1d4a9d;
+		overflow: hidden;
+	}
+	.pl-dul li {
+		position: relative;
+		float: left;
+		padding: 9px 20px;
+		color: #ffffff;
+		font-size: 16px;
+		cursor: pointer;
+	}
+	.pl-dul li.pli-in {
+		background-color: #0d3070;
+	}
+	.pl-dul li.pli-in:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 4px;
+		background-color: #ffb61a;
+	}
+	.pli-con {
+		position: relative;
+		width: 100%;
+		color: #ffffff;
+		display: none;
+	}
+
+	.p-right-up {
+		position: relative;
+		width: 100%;
+		height: 40px;
+		margin-bottom: 10px;
+		overflow: hidden;
+	}
+	.p-title {
+		line-height: 40px;
+		text-indent: 20px;
+		font-size: 22px;
+		font-weight: bold;
+		color: #ffffff;
+	}
+	.pr-oper-btn {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		overflow: hidden;
+	}
+	.p-blue-btn, .p-org-btn {
+		display: inline-block;
+		width: 112px;
+		height: 30px;
+		text-align: center;
+		line-height: 30px;
+		color: #ffffff;
+		font-size: 16px;	
+		border-radius: 5px;
+		cursor: pointer;
+	}
+	.p-blue-btn {
+		background: -webkit-gradient(linear,0 0,0 100%,from(#1297EA),to(#0E76E1));
+		background: -moz-linear-gradient(#1297EA,#0E76E1);
+		background: -ms-linear-gradient(#1297EA,#0E76E1);
+		background: linear-gradient(to bottom,#1297EA,#0E76E1);
+		border-top: 1px solid #6DC2F2;
+		border-bottom: 1px solid #0956A4;
+	}
+	.p-org-btn {
+		background: -webkit-gradient(linear,0 0,0 100%,from(#FEB321),to(#FE9615));
+		background: -moz-linear-gradient(#FEB321,#FE9615);
+		background: -ms-linear-gradient(#FEB321,#FE9615);
+		background: linear-gradient(to bottom,#FEB321,#FE9615);
+		border-top: 1px solid #FED277;
+		border-bottom: 1px solid #BA6E0E;
+	}
+
+	.p-blue-btn:hover, .p-org-btn:hover {
+		color: #ffffff;
+	}
+	.p-blue-btn i {
+		width: 18px;
+		height: 18px;
+		color: #ffffff;
+		vertical-align: middle;
+		margin-top: -1px;
+		margin-right: 5px;
+	}
+
+	.p-right-down {
+		position: relative;
+		width: 100%;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+	.pr-layer-title {
+		position: relative;
+		width: 100%;
+		height: 38px;
+	}
+	.pr-f-layer {
+		position: relative;
+		width: 100%;
+		min-height: 60px;
+		margin-bottom: 10px;
+		background-color: #0d3070;
+		overflow: hidden;
+	}
+	.p-title-sm {
+		line-height: 38px;
+		text-indent: 20px;
+		font-size: 16px;
+		color: #ffffff;
+		background-color: #1d4a9d;
+	}
+	.pr-btn {
+		display: inline-block;
+		padding: 3px 10px;
+		font-size: 16px;
+		color: #ffffff;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+	.pr-btn:hover {
+		color: #ffffff;
+		background-color: #295ec0;
+	}
+	.pr-btn i {
+		vertical-align: middle;
+		margin-top: -1px;
+		margin-right: 8px;
+	}
+	.pr-f-con {
+		position: relative;
+		margin: 10px 15px;
+		min-height: 60px;
+		background-color: #1d4a9d;
+		overflow: hidden;
+	}
+	.pr-f-block {
+		position: relative;
+		padding-top: 30px;
+		padding-bottom: 8px;
+	}
+	.f-block-row {
+		position: relative;
+		width: 100%;
+		min-height: 26px;
+		line-height: 26px;
+		color: #7ea1e1;
+	}
+	.f-b-items {
+		float: left;
+		width: 120px;
+		font-size: 16px;
+		text-align: right;
+		letter-spacing: 2px;
+	}
+	.f-b-details {
+		position: relative;
+		margin-left: 130px;
+		font-size: 16px;
+	}
+	.f-con-btn {
+		width: 262px;
+		margin: 15px auto;
+		overflow: hidden;
+	}
+	.f-con-btn .p-blue-btn, .f-con-btn .p-org-btn {
+		margin: 0 8px;
+	}
+
+/*步骤添加弹框样式*/
+	.add-step {
+		position: relative;
+		width: 600px;
+		height: 360px;
+		overflow: hidden;
+	}
+	.input-row {
+		position: relative;
+		padding-left: 60px;
+		margin-top: 15px;
+	}
+	.row-textarea {
+		width: 300px;
+		height: 100px;
+		border: 0;
+		outline: none;
+		resize: none;
+		padding: 5px;
+		color: #ffffff;
+		background-color: #1c408a;
+	}
+	.add-execute, .edit-exe {
+		position: relative;
+		width: 600px;
+		height: 300px;
+		overflow: hidden;
+	}

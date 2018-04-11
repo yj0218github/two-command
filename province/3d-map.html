@@ -354,7 +354,10 @@
 			</ul>
 			<div class="tx-con">
 				<div class="tx-ulcon tx-ulcon1" style="display: block;">
-					<ul class="ztree item-menu" id="itemmenu"></ul>
+					<div class="tx-tree">
+						<ul class="ztree item-menu" id="itemmenu"></ul>
+					</div>
+					<a class="blue-btn hj-btn">呼叫</a>
 				</div>
 				<div class="tx-ulcon tx-ulcon2">
 					<div class="tx-tab">
@@ -446,16 +449,122 @@
 							</table>
 						</div>
 					</div>
+					<a class="blue-btn hj-btn">呼叫</a>
 				</div>
 			</div>
-			<a class="blue-btn">呼叫</a>
 		</div>
+	</div>
+
+	<div class="tx-pop" id="tx-pop" style="display: none;">
+		<div class="hj-state"><img src="../images/hj_state.gif" /></div>
+		<div class="hj-p-des">
+			<div class="hj-p">
+				<img src="../images/mj_img.png" />
+				<div class="hj-p-info">
+					<p>张三</p>
+					<p>32145678950</p>
+					<p>一监区一分监区</p>
+				</div>
+			</div>
+			<div class="hj-p">
+				<img src="../images/mj_img.png" />
+				<div class="hj-p-info">
+					<p>张三</p>
+					<p>32145678950</p>
+					<p>一监区一分监区</p>
+				</div>
+			</div>
+			<div class="hj-p">
+				<img src="../images/mj_img.png" />
+				<div class="hj-p-info">
+					<p>张三</p>
+					<p>32145678950</p>
+					<p>一监区一分监区</p>
+				</div>
+			</div>
+			<div class="hj-p">
+				<img src="../images/mj_img.png" />
+				<div class="hj-p-info">
+					<p>张三</p>
+					<p>32145678950</p>
+					<p>一监区一分监区</p>
+				</div>
+			</div>
+			<div class="hj-p">
+				<img src="../images/mj_img.png" />
+				<div class="hj-p-info">
+					<p>张三</p>
+					<p>32145678950</p>
+					<p>一监区一分监区</p>
+				</div>
+			</div>
+			<div class="hj-p">
+				<img src="../images/mj_img.png" />
+				<div class="hj-p-info">
+					<p>张三</p>
+					<p>32145678950</p>
+					<p>一监区一分监区</p>
+				</div>
+			</div>
+			<div class="hj-p">
+				<img src="../images/mj_img.png" />
+				<div class="hj-p-info">
+					<p>张三</p>
+					<p>32145678950</p>
+					<p>一监区一分监区</p>
+				</div>
+			</div>
+			<div class="hj-p">
+				<img src="../images/mj_img.png" />
+				<div class="hj-p-info">
+					<p>张三</p>
+					<p>32145678950</p>
+					<p>一监区一分监区</p>
+				</div>
+			</div>
+			<div class="hj-p">
+				<img src="../images/mj_img.png" />
+				<div class="hj-p-info">
+					<p>张三</p>
+					<p>32145678950</p>
+					<p>一监区一分监区</p>
+				</div>
+			</div>
+			<div class="hj-p">
+				<img src="../images/mj_img.png" />
+				<div class="hj-p-info">
+					<p>张三</p>
+					<p>32145678950</p>
+					<p>一监区一分监区</p>
+				</div>
+			</div>
+			<div class="hj-p">
+				<img src="../images/mj_img.png" />
+				<div class="hj-p-info">
+					<p>张三</p>
+					<p>32145678950</p>
+					<p>一监区一分监区</p>
+				</div>
+			</div>
+			<div class="hj-p">
+				<img src="../images/mj_img.png" />
+				<div class="hj-p-info">
+					<p>张三</p>
+					<p>32145678950</p>
+					<p>一监区一分监区</p>
+				</div>
+			</div>
+		</div>
+		<a class="hj-blue-btn"><img src="../images/phone_icon.png" />呼叫取消</a>
+		<a class="hj-red-btn"><img src="../images/phone_icon.png" />呼叫挂断</a>
 	</div>
 
 	<script type="text/javascript" src="../js/jquery.min.js"></script>
 	<script type="text/javascript" src="../js/common.js"></script>
 	<script type="text/javascript" src="../js/ztree/js/jquery.ztree.core.js"></script>
 	<!-- <script type="text/javascript" src="../js/ztree/js/jquery.ztree.excheck.js"></script> -->
+	<script type="text/javascript" src="../js/zDialog.js"></script>
+    <script type="text/javascript" src="../js/zDrag.js"></script>
 	<script type="text/javascript">
 		$(function(){
 			heightSize();		//右侧内容距顶部高度
@@ -550,6 +659,24 @@
 		    $(document).ready(function(){
 		        $.fn.zTree.init($("#itemmenu"), setting, zNodes);
 		    });
+
+		    $(".hj-btn").click(function(){
+		    	var diag1 = new Dialog();
+		    	diag1.Width = 1030;
+				diag1.Height = 580;
+				diag1.Title = "呼叫状态";
+				diag1.Top = "50%";
+				diag1.Left = "50%";
+				diag1.InvokeElementId = "tx-pop";
+				diag1.Modal = false;
+				diag1.show();
+		    });
+
+		    setTimeout(function(){
+		    	$(".hj-state").fadeOut();
+		    	$(".hj-blue-btn").hide();
+		    	$(".hj-red-btn").show();
+		    },3000);
 		});
 
 		//右侧内容距顶部高度
@@ -586,9 +713,9 @@
 			var trHtml = "";
 			for(var i=0;i<dataJson.length;i++){
 				if(i%2==0){
-					trHtml += "<tr id='tr_"+i+"' class='ftr-odd'>";
+					trHtml += "<tr class='ftr-odd'>";
 				}else {
-					trHtml += "<tr id='tr_"+i+"'>";
+					trHtml += "<tr>";
 				}
 				trHtml += "<td width='30%'>"+dataJson[i].name+"</td>";
 				trHtml += "<td width='40%'>"+dataJson[i].phone+"</td>";
@@ -597,30 +724,16 @@
 			}
 
 			$(".tx-tbody table tbody").append(trHtml);
-			// $(".tx-tbody table tbody tr").each(function(){
-			// 	var index = $(this).index();
-			// 	if(index%2 == 0){
-			// 		$(this).addClass("ftr-odd");
-			// 	}
-			// });
-
+			
 			$(".del-tr").click(function(){
 				var parentTr = $(this).parents("tr");
 				var trIndex = parentTr.index();
-				if(trIndex > 1){
+				if(trIndex > 0){
 					parentTr.remove();
 				}else {
 					alert("不可删除第一行！");
 				}
-				numCheck();//执行下个方法的
 			});
-		}
-
-		function numCheck(){
-			var num = $(".tx-tbody table tr").length;
-			for(var j=0;j<=num;j++){
-				$(".tx-tbody table tr#tr_"+j+"").eq(j).html(j+1);
-			}
 		}
 	</script>
 </body>

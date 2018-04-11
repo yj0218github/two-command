@@ -1653,7 +1653,7 @@ body {
 	.tx-con {
 		position: relative;
 		width: 100%;
-		height: 480px;
+		height: 560px;
 		margin: 0 auto;
 		overflow: hidden;
 	}
@@ -1661,6 +1661,12 @@ body {
 		display: none;
 		position: relative;
 		width: 360px;
+		height: 560px;
+		overflow: hidden;
+	}
+	.tx-tree {
+		position: relative;
+		width: 100%;
 		height: 480px;
 		overflow: auto;
 	}
@@ -1701,3 +1707,84 @@ body {
 		display: inline-block;
 		cursor: pointer;
 	}
+	/*弹框样式*/
+		.tx-pop {
+			position: relative;
+			width: 1030px;
+			height: 580px;
+			overflow: hidden;
+		}
+		.hj-state {
+			/*position: absolute;*/
+			/*top: 0;*/
+			left: 50%;
+			width: 90px;
+			height: 30px;
+			margin-left: -45px;
+			z-index: 10;
+		}
+		.hj-p-des {
+			position: relative;
+			width: 100%;
+			height: 440px;
+			margin-top: 8px;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
+		.hj-p {
+			float: left;
+			width: 224px;
+			height: 138px;
+			margin: 0 0 20px 24px;
+			background-color: #103a85;
+			border-radius: 8px;
+		}
+		.hj-p img {
+			float: left;
+			width: 76px;
+			height: 108px;
+			margin: 15px 0 0 15px;
+		}
+		.hj-p-info {
+			position: relative;
+			margin-left: 100px;
+			margin-top: 15px;
+		}
+		.hj-p-info p {
+			margin-bottom: 0 !important;
+			color: #ffffff;
+			font-size: 16px;
+			text-align: left;
+			line-height: 24px;
+		}
+	
+		.hj-blue-btn, .hj-red-btn {
+			display: block;
+			width: 112px;
+			height: 32px;
+			line-height: 32px;
+			text-align: center;
+			color: #ffffff !important;
+			border-radius: 4px;
+			cursor: pointer;
+			margin: 50px auto 0;
+		}
+		.hj-blue-btn {
+			background: -webkit-gradient(linear,0 0,0 100%,from(#0ab7ed),to(#049ae3));
+			background: -moz-linear-gradient(#0ab7ed,#049ae3);
+			background: -ms-linear-gradient(#0ab7ed,#049ae3);
+			background: linear-gradient(to bottom,#0ab7ed,#049ae3);
+			border: 1px solid #35ade8;
+		}
+		.hj-red-btn {
+			background: -webkit-gradient(linear,0 0,0 100%,from(#f24041),to(#eb2526));
+			background: -moz-linear-gradient(#f24041,#eb2526);
+			background: -ms-linear-gradient(#f24041,#eb2526);
+			background: linear-gradient(to bottom,#f24041,#eb2526);
+			border: 1px solid #f26e6e;
+		}
+		.hj-blue-btn img, .hj-red-btn img {
+			vertical-align: middle;
+			margin-top: -4px;
+			margin-right: 5px;
+		}
