@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>预案执行</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../font-awesome-4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="../css/plan.css" />
+</head>
+<body>
+	<div class="plan-container">
+		<div class="plan-head"><img src="../images/plan_logo.png" /></div>
+		<div class="plan-e-middle">
+			<div class="plan-e-right">
+				<!-- <div class="pe-right-up clearfix">
+					<h2 class="p-title">预案步骤</h2>
+					<div class="pr-oper-btn">
+						<a class="p-blue-btn" onclick="addStep();"><i class="fa fa-plus-square-o"></i>增加步骤</a>
+					</div>
+				</div> -->
+				<p style="color: #fff;width: 100px;height: 18px;text-align: justify;text-align: end;text-align-last: justify; text-justify: distribute;">内容内容</p>
+				<p style="color: #fff;width: 100px;height: 18px;text-align:inter-ideograph;">内容内容内容内容:</p>
+				<p style="color: #fff;width: 100px;height: 18px;text-align:inter-ideograph;">内容内容内容:</p>		
+				<div class="pe-right-down">
+					<div class="sort">
+						<a class="sort-icon-link">1</a>
+						<a class="sort-icon-link">2</a>
+						<a class="sort-icon-link">3</a>
+					</div>
+					<div class="pe-r-step pr-f1">
+						<div class="sort-icon">1</div>
+						<div class="pre-f-layer">
+							<div class="pr-layer-con">
+								<div class="pr-layer-title clearfix">
+									<h2 class="p-title-sm">步骤一：测试</h2>
+									<div class="pr-oper-btn">
+										<a class="pr-btn" onclick="addExecute();"><i class="fa fa-plus-square-o"></i>增加</a>
+										<a class="pr-btn"><i class="fa fa-trash"></i>删除</a>
+									</div>
+								</div>
+								<div class="pre-f-con">
+									<div class="pr-f-block">
+										<div class="pr-oper-btn">
+											<a class="pr-btn" onclick="editExe();"><i class="fa fa-edit"></i>修改</a>
+											<a class="pr-btn"><i class="fa fa-trash"></i>删除</a>
+										</div>
+										<div class="f-block-row clearfix">
+											<div class="f-b-items">执行一：</div>
+											<div class="f-b-details">这里显示的是这个步骤的相关内容，这里显示的是这个步骤的相关内容这里显示的是这个的相关内容，这里显示的是这个步骤的相关内容这里显示的是这个步骤的相关内容这里显示的是这个步骤的相关内容，这里显示的是这个步骤的相关内容这里显示的是这个的相关内容，这里显示的是这个步骤的相关内容这里显示的是这个步骤的相关内容这里显示的是这个步骤的相关内容，这里显示的是这个步骤的相关内容这里显示的是这个的相关内容，这里显示的是这个步骤的相关内容这里显示的是这个步骤的相关内容</div>
+											<div class="f-b-items">相关组别：</div>
+											<div class="f-b-details">XX组，X组，X组</div>
+										</div>
+									</div>
+								</div>
+								<div class="pre-f-con">
+									<div class="pr-f-block">
+										<div class="pr-oper-btn">
+											<a class="pr-btn" onclick="editExe();"><i class="fa fa-edit"></i>修改</a>
+											<a class="pr-btn"><i class="fa fa-trash"></i>删除</a>
+										</div>
+										<div class="f-block-row clearfix">
+											<div class="f-b-items">执行一：</div>
+											<div class="f-b-details">这里显示的是这个步骤的相关内容，这里显示的是这个步骤的相关内容这里显示的是这个的相关内容，这里显示的是这个步骤的相关内容这里显示的是这个步骤的相关内容</div>
+											<div class="f-b-items">相关组别：</div>
+											<div class="f-b-details">XX组，X组，X组</div>
+										</div>
+									</div>
+								</div>
+								<div class="pre-f-con">
+									<div class="pr-f-block">
+										<div class="pr-oper-btn">
+											<a class="pr-btn" onclick="editExe();"><i class="fa fa-edit"></i>修改</a>
+											<a class="pr-btn"><i class="fa fa-trash"></i>删除</a>
+										</div>
+										<div class="f-block-row clearfix">
+											<div class="f-b-items">执行一：</div>
+											<div class="f-b-details">这里显示的是这个步骤的相关内容，这里显示的是这个步骤的相关内容这里显示的是这个的相关内容，这里显示的是这个步骤的相关内容这里显示的是这个步骤的相关内容</div>
+											<div class="f-b-items">相关组别：</div>
+											<div class="f-b-details">XX组，X组，X组</div>
+										</div>
+									</div>
+								</div>
+								<div class="f-con-btn">
+									<a class="p-blue-btn">设备联动</a>
+									<a class="p-org-btn">设备联动</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pe-r-step pr-f2">
+						<div class="sort-icon">2</div>
+						<div class="pre-f-layer">
+							<div class="pr-layer-con">
+								<div class="pr-layer-title clearfix">
+									<h2 class="p-title-sm">步骤二：测试</h2>
+									<div class="pr-oper-btn">
+										<a class="pr-btn" onclick="addExecute();"><i class="fa fa-plus-square-o"></i>增加</a>
+										<a class="pr-btn"><i class="fa fa-trash"></i>删除</a>
+									</div>
+								</div>
+								<div class="pre-f-con">
+									<div class="pr-f-block">
+										<div class="pr-oper-btn">
+											<a class="pr-btn" onclick="editExe();"><i class="fa fa-edit"></i>修改</a>
+											<a class="pr-btn"><i class="fa fa-trash"></i>删除</a>
+										</div>
+										<div class="f-block-row clearfix">
+											<div class="f-b-items">执行一：</div>
+											<div class="f-b-details">这里显示的是这个步骤的相关内容，这里显示的是这个步骤的相关内容这里显示的是这个的相关内容，这里显示的是这个步骤的相关内容这里显示的是这个步骤的相关内容这里显示的是这个步骤的相关内容，这里显示的是这个步骤的相关内容这里显示的是这个的相关内容，这里显示的是这个步骤的相关内容这里显示的是这个步骤的相关内容这里显示的是这个步骤的相关内容，这里显示的是这个步骤的相关内容这里显示的是这个的相关内容，这里显示的是这个步骤的相关内容这里显示的是这个步骤的相关内容</div>
+											<div class="f-b-items">相关组别：</div>
+											<div class="f-b-details">XX组，X组，X组</div>
+										</div>
+									</div>
+								</div>
+								<div class="pre-f-con">
+									<div class="pr-f-block">
+										<div class="pr-oper-btn">
+											<a class="pr-btn" onclick="editExe();"><i class="fa fa-edit"></i>修改</a>
+											<a class="pr-btn"><i class="fa fa-trash"></i>删除</a>
+										</div>
+										<div class="f-block-row clearfix">
+											<div class="f-b-items">执行一：</div>
+											<div class="f-b-details">这里显示的是这个步骤的相关内容，这里显示的是这个步骤的相关内容这里显示的是这个的相关内容，这里显示的是这个步骤的相关内容这里显示的是这个步骤的相关内容</div>
+											<div class="f-b-items">相关组别：</div>
+											<div class="f-b-details">XX组，X组，X组</div>
+										</div>
+									</div>
+								</div>
+								<div class="pre-f-con">
+									<div class="pr-f-block">
+										<div class="pr-oper-btn">
+											<a class="pr-btn" onclick="editExe();"><i class="fa fa-edit"></i>修改</a>
+											<a class="pr-btn"><i class="fa fa-trash"></i>删除</a>
+										</div>
+										<div class="f-block-row clearfix">
+											<div class="f-b-items">执行一：</div>
+											<div class="f-b-details">这里显示的是这个步骤的相关内容，这里显示的是这个步骤的相关内容这里显示的是这个的相关内容，这里显示的是这个步骤的相关内容这里显示的是这个步骤的相关内容</div>
+											<div class="f-b-items">相关组别：</div>
+											<div class="f-b-details">XX组，X组，X组</div>
+										</div>
+									</div>
+								</div>
+								<div class="f-con-btn">
+									<a class="p-blue-btn">设备联动</a>
+									<a class="p-org-btn">设备联动</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pe-r-step pr-f3">
+						<div class="sort-icon">3</div>
+						<div class="pre-f-layer">
+							<div class="pr-layer-con">
+								<div class="pr-layer-title clearfix">
+									<h2 class="p-title-sm">步骤三：测试</h2>
+									<div class="pr-oper-btn">
+										<a class="pr-btn" onclick="addExecute();"><i class="fa fa-plus-square-o"></i>增加</a>
+										<a class="pr-btn"><i class="fa fa-trash"></i>删除</a>
+									</div>
+								</div>
+								<div class="pre-f-con">
+									<div class="pr-f-block">
+										<div class="pr-oper-btn">
+											<a class="pr-btn" onclick="editExe();"><i class="fa fa-edit"></i>修改</a>
+											<a class="pr-btn"><i class="fa fa-trash"></i>删除</a>
+										</div>
+										<div class="f-block-row clearfix">
+											<div class="f-b-items">执行一：</div>
+											<div class="f-b-details">这里显示的是这个步骤的相关内容，这里显示的是这个步骤的相关内容这里显示的是这个的相关内容，这里显示的是这个步骤的相关内容这里显示的是这个步骤的相关内容这里显示的是这个步骤的相关内容，这里显示的是这个步骤的相关内容这里显示的是这个的相关内容，这里显示的是这个步骤的相关内容这里显示的是这个步骤的相关内容这里显示的是这个步骤的相关内容，这里显示的是这个步骤的相关内容这里显示的是这个的相关内容，这里显示的是这个步骤的相关内容这里显示的是这个步骤的相关内容</div>
+											<div class="f-b-items">相关组别：</div>
+											<div class="f-b-details">XX组，X组，X组</div>
+										</div>
+									</div>
+								</div>
+								<div class="pre-f-con">
+									<div class="pr-f-block">
+										<div class="pr-oper-btn">
+											<a class="pr-btn" onclick="editExe();"><i class="fa fa-edit"></i>修改</a>
+											<a class="pr-btn"><i class="fa fa-trash"></i>删除</a>
+										</div>
+										<div class="f-block-row clearfix">
+											<div class="f-b-items">执行一：</div>
+											<div class="f-b-details">这里显示的是这个步骤的相关内容，这里显示的是这个步骤的相关内容这里显示的是这个的相关内容，这里显示的是这个步骤的相关内容这里显示的是这个步骤的相关内容</div>
+											<div class="f-b-items">相关组别：</div>
+											<div class="f-b-details">XX组，X组，X组</div>
+										</div>
+									</div>
+								</div>
+								<div class="pre-f-con">
+									<div class="pr-f-block">
+										<div class="pr-oper-btn">
+											<a class="pr-btn" onclick="editExe();"><i class="fa fa-edit"></i>修改</a>
+											<a class="pr-btn"><i class="fa fa-trash"></i>删除</a>
+										</div>
+										<div class="f-block-row clearfix">
+											<div class="f-b-items">执行一：</div>
+											<div class="f-b-details">这里显示的是这个步骤的相关内容，这里显示的是这个步骤的相关内容这里显示的是这个的相关内容，这里显示的是这个步骤的相关内容这里显示的是这个步骤的相关内容</div>
+											<div class="f-b-items">相关组别：</div>
+											<div class="f-b-details">XX组，X组，X组</div>
+										</div>
+									</div>
+								</div>
+								<div class="f-con-btn">
+									<a class="p-blue-btn">设备联动</a>
+									<a class="p-org-btn">设备联动</a>
+								</div>
+							</div>
+						</div>
+					</div>		
+				</div>				
+			</div>
+			<div class="plan-e-left">
+				<div class="pe-left-up">
+					<h2 class="p-title">突发事件</h2>
+					<div class="pe-l-con clearfix">
+						<div class="con-block clearfix">
+							<div class="con-item">发生区域：</div>
+							<div class="con-des">一号监舍</div>
+						</div>
+						<div class="con-block clearfix">
+							<div class="con-item">汇报人员：</div>
+							<div class="con-des">张山</div>
+						</div>
+						<div class="con-block clearfix">
+							<div class="con-item">发生时间：</div>
+							<div class="con-des">2018-04-12 10:10:10</div>
+						</div>
+						<div class="con-block clearfix">
+							<div class="con-item">事件描述：</div>
+							<div class="con-des1">这里是对一下视频的简单描述这里是对一下视频的简单描述这里是对一下视频的简单描述这里是对一下视频的简单描述这里是对一下视频的简单描述这里是对一下视频的简单描述这里是对一下视频的简单描述</div>
+						</div>
+					</div>
+				</div>
+				<div class="pe-left-down">
+					<div class="pe-m-block"></div>
+					<div class="pe-m-block"></div>
+					<div class="pe-m-block"></div>
+					<div class="pe-m-block"></div>
+					<div class="pe-m-block"></div>
+					<div class="pe-m-block"></div>
+					<div class="pe-m-block"></div>
+					<div class="pe-m-block"></div>
+					<div class="pe-m-block"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/zDialog.js"></script>
+    <script type="text/javascript" src="../js/zDrag.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			setexeWH();		//自动获取内容高度
+			moveEvent();	//鼠标移动事件
+		});
+
+		function setexeWH(){
+			var mainH = $(window).height();
+			var mainW = $(window).width();
+			var headH = $(".plan-head").height();
+
+			//获取中间内容高度
+			$(".plan-e-middle").height(mainH - headH - 42);
+			var emiddleH = $(".plan-e-middle").height();
+			$(".plan-e-left, .plan-e-right").height(emiddleH-32);
+			var peMH = $(".plan-e-left,.plan-e-right").height();
+
+			//左侧内容获取高度
+			var peleftUpH = $(".pe-left-up").height();
+			// alert(peleftUpH);
+			$(".pe-left-down").height(peMH-peleftUpH);
+			var peleftDownH = $(".pe-left-down").height();
+			$(".pe-m-block").height((peleftDownH-24)/3);
+
+			//右侧内容获取高度
+			// var perightUpH = $(".pe-right-up").height();
+			// $(".pe-right-down").height(peMH-perightUpH-10);
+
+			// var perightUpH = $(".pe-right-up").height();
+			$(".pe-right-down").height(peMH);
+		}
+
+		function moveEvent(){
+			// $(".sort").moveover(function(){
+			// 	var x = $(this).find("a").index();
+			// 	$(".pe-r-step").attr({"_content":"pr-f"+x}).animate({
+			// 		"margin-top":-300*x
+			// 	},3000);
+			// });
+
+			var i=1;
+			// var nowDiv = 1;
+			// var div;
+			var num = $(".sort").find("a").length;
+			var scrollTop = new Array();
+			for(;i<=num;i++) {
+				var st = $(".pr-f"+i).height();
+				scrollTop.push(st);
+			}
+			
+			// for(var j=1;j<=num;j++) {
+			// 	if(j==nowDiv){
+			// 		$(".pe-right-down").bind("scroll",function(j){
+			// 			$(".sort a:eq(j-1)").css("display","block").addClass("sort-icon-gray");
+			// 		});
+			// 	}
+			// }
+
+			$(".pe-right-down").bind("scroll",function(index){
+				// var top = $(this).scrollTop();
+				// console.log(top);
+
+				// $(".pe-r-step").each(function(index){
+				// 	if (top > scrollTop[index]) {
+				// 		$(".sort a:eq(index+1)").css("display","none");
+				// 	}else {
+				// 		$(".sort a:eq(index+1)").css("display","block");
+				// 	}
+				// });
+				// $(".sort a").click(function(){
+				// 	var that = this;
+				// 	var aIndex = $(that).index();
+				// 	var prFH = $(".pr-f"+(aIndex+1)).height();
+				// 	$(".pr-f"+(aIndex+1)).animate({
+				// 		"margin-top":-prFH,
+				// 		"visibility":"visible"
+				// 	},1000);
+				// });
+				var index=1;
+				// for(var i=1;i<num;i++){
+					var stepH = $(".pe-r-step").eq(index-1).height();
+					var stepTop = $(".pe-r-step").eq(index-1).scrollTop();
+				// }
+				if(stepTop == 0){
+					$(".sort").find("a:eq("+index+"-1)").show().addClass("sort-icon-in");
+					alert(1);
+					$(".sort").find("a:lt("+index+"-1)").show().addClass("sort-icon-gray");
+					$(".pe-r-step").eq(index+1).fadeOut();
+				}else if(stepTop < stepH){
+					alert(2);
+					$(".sort").find("a:eq("+index+"-1)").show().addClass("sort-icon-in");
+					$(".sort").find("a:lt("+index+"-1)").show().addClass("sort-icon-gray");
+				}else if(stepTop == stepH){
+					alert(3);
+					$(".sort").find("a:eq("+index+")").show().addClass("sort-icon-in");
+					$(".sort").find("a:lt("+index+")").show().addClass("sort-icon-gray");
+				}
+
+			});
+		}
+	</script>
+</body>
+</html>

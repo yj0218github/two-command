@@ -8,6 +8,37 @@
 	<link rel="stylesheet" type="text/css" href="../font-awesome-4.7.0/css/font-awesome.min.css" />
 	<link rel="stylesheet" type="text/css" href="../css/style.css" />
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+	<style type="text/css">
+		.prison-info {
+			width: auto;
+			margin: 0 10px;
+			height: 2.4rem;
+		}
+		.li-circle {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 5px;
+			margin-top: -4px;
+			width: 14px;
+			height: 14px;
+			border-radius: 50%;
+			background-color: #689CE7;
+		}
+		.li-circle::before {
+			content: "";
+			position: absolute;
+			top: 3px;
+			left: 3px;
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background-color: #ffffff;
+		}
+		#prisonGeneral {
+			height: 80%;
+		}
+	</style>
 </head>
 <body>
 	<div class="container">
@@ -117,15 +148,15 @@
 						<div class="box-title">监狱概况说明</div>
 						<div class="prison-info">
 							<ul>
-								<li>
+								<!-- <li>
 									监狱：<span class="org-text">40个</span>
-								</li>
+								</li> -->
 								<li>
-									监区：<span class="org-text">209个</span>
+									<span class="li-circle"></span>监区：<span class="org-text">209个</span>
 								</li>
-								<li>
+								<!-- <li>
 									关押点：<span class="org-text">20个</span>
-								</li>
+								</li> -->
 							</ul>
 						</div>
 						<div id="prisonGeneral"></div>
@@ -233,8 +264,12 @@
 	            backgroundColor: 'rgba(0,0,0,0)',
 	            options3d: {
 	                enabled: true,
-	                alpha: 45
-	            }
+	                alpha: 70
+	            },
+	            spacingTop: 20,
+	            spacingBottom: 0,
+	            spacingLeft: 10,
+	            spacingRight: 10
 	        },
 	        credits: {
 	            enabled: false
@@ -261,14 +296,29 @@
 	            text: ''
 	        },
 	        legend: {
-	        	enabled: true
+	        	enabled: true,
+	        	align: 'left',
+            	verticalAlign: 'top',
+	        	floating: true,
+	        	symbolRadius: 0,
+	        	itemStyle : {
+	        		color:"#ffffff",
+	        		fontSize: '12px'
+	        	},
+	        	itemHoverStyle:{
+	        		color:"#ffffff",
+	        	},
+	        	itemHiddenStyle:{
+	        		color:"#999999",
+	        	}
 	        },
 	        plotOptions: {
 	            pie: {
 	                allowPointSelect: true,
 	                cursor: 'pointer',
 	                innerSize: 100,
-	                depth: 30,
+	                depth: 15,
+	                size: "70%",
 	                dataLabels: {
 	                    enabled: true,
 	                    format: '{point.name}',
@@ -282,7 +332,7 @@
 	        },
 	        series: [{
 	            colors: ['#0b76e5', '#f2d314', '#48e44d', '#d7362e', '#df8510', '#64E572', '#FF9655','#FFF263', '#6AF9C4'],
-	            // showInLegend: true,
+	            showInLegend: true,
 	            data: [
 	                ['本月释放', 82],
 	                ['本月收押', 23],

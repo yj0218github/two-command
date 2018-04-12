@@ -7,7 +7,7 @@ html,body {
 body {
 	background: url(../images/background.png) no-repeat;
 }
-/*预案添加和预案执行页面总体布局*/
+/*页面总体布局*/
 	.plan-container {
 		position: relative;
 		width: 100%;
@@ -22,7 +22,7 @@ body {
 		margin-left: 30px;
 		padding-top: 20px;
 	}
-	.plan-middle, .plan-e-middle {
+	.plan-middle {
 		position: relative;
 		margin: 0 30px;
 		overflow: hidden;
@@ -88,6 +88,12 @@ body {
 		background: rgba(10,38,88,0.5);
 		border: 1px solid #415481;
 	}
+	/*.plan-left, .plan-right {
+		position: relative;
+		float: left;
+		background: rgba(10,38,88,0.5);
+		border: 1px solid #415481;
+	}*/
 	.plan-left {
 		margin-right: 20px;
 	}
@@ -265,7 +271,7 @@ body {
 	}
 	.f-block-row {
 		position: relative;
-		margin: 0 5px;
+		width: 100%;
 		min-height: 26px;
 		line-height: 26px;
 		color: #7ea1e1;
@@ -318,139 +324,4 @@ body {
 		width: 600px;
 		height: 300px;
 		overflow: hidden;
-	}
-
-/*预案执行样式*/
-	.plan-e-left {
-		position: relative;
-		margin-right: 795px;
-		min-height: ;
-		padding: 15px;
-		background: rgba(10,38,88,0.5);
-		border: 1px solid #415481;
-	}
-	.plan-e-right {
-		position: relative;
-		float: right;
-		width: 746px;
-		padding: 15px;
-		background: rgba(10,38,88,0.5);
-		border: 1px solid #415481;
-	}
-	.pe-l-con {
-		position: relative;
-		width: 100%;
-		overflow: hidden;
-	}
-	.con-block {
-		float: left;
-		/*width: 260px;*/
-		min-height: 36px;
-		line-height: 36px;
-		font-size: 16px;
-		color: #ffffff;
-		overflow: hidden;
-	}
-	.con-item {
-		float: left;
-		min-width: 100px;
-		margin-right: 5px;
-		text-align: right;
-	}
-	.con-des {
-		float: left;
-		min-width: 80px;
-		margin-right: 5px;
-		color: #b9cffb;
-	}
-	.con-des1 {
-		min-height: 30px;
-		margin-right: 5px;
-		color: #b9cffb;
-		margin-left: 110px;
-	}
-
-	.pe-m-block {
-		float: left;
-		width: 32%;
-		margin: 8px 0 0 1%;
-		background-color: #4A6492;
-	}
-
-	.pe-right-down {
-		overflow-x: hidden;
-		overflow-y: auto;
-	}
-	
-	.pe-r-step {
-		position: relative;
-		width: 730px;			
-		overflow: hidden;
-	}
-	.pre-f-layer {
-		position: relative;
-		width: 680px;
-		padding-left: 25px;
-		margin-left: 20px;
-		border-left: 2px dotted #ffffff;
-	}
-	.pr-layer-con {
-		width: 680px;
-		margin-top: 20px;		
-		background-color: #235DC9;
-		overflow: hidden;
-	}
-	.pre-f-con {
-		position: relative;
-		margin: 10px 15px;
-		min-height: 60px;
-		background-color: #0D3070;
-		overflow: hidden;
-	}
-
-	.sort {
-		position: fixed;
-		top: 136px;
-		right: 755px;
-		width: 32px;
-		z-index: 6;
-	}
-	.sort-icon-link {
-		display: none;
-		width: 32px;
-		height: 32px;
-		line-height: 32px;
-		font-size: 16px;
-		color: #ffffff;
-		text-align: center;
-		border-radius: 50%;
-		background-color: #55C351;
-		cursor: pointer;
-		margin-bottom: 2px;
-	}
-	.sort-icon-link:hover {
-		color: #ffffff;
-		background-color: #55C351;
-	}
-	.sort-icon-in {
-		background-color: #55C351;
-	}
-	.sort-icon-gray {
-		background-color: #cfcfcf;
-	}
-
-	.sort-icon {
-		position: absolute;
-		left: 5px;
-		top: 0;
-		z-index: 4;
-		width: 32px;
-		height: 32px;
-		line-height: 32px;
-		color: #efe;
-		text-align: center;
-		font-size: 16px;
-		background-color: #57C44E;
-		border-radius: 50%;
-		visibility: visible;
 	}
