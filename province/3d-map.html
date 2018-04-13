@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="../js/ztree/css/zTreeStyle/zTreeStyle.css">
 </head>
 <body>
-	<!-- <div class="third-d-content">
+	<div class="third-d-content">
 		<div class="third-right">
 			<ul class="third-ul">
 				<li>
@@ -221,53 +221,29 @@
 				<li>
 					<a class="third-a"><img src="../images/location_icon.png" />定位</a>
 					<div class="tdli-con">
-						<div class="input-box clearfix">
-							<div class="input-label">文本框查询：</div>
-							<div class="input-text">
-								<div class="input-block">
-									<input type="text" class="input-w1">
-								</div>
-							</div>
+						<div class="input-box1 clearfix" style="padding-bottom: 10px;border-bottom: 1px solid #fff;">
+							<a class="blue-btn">新增</a>
+							<a class="org-btn">删除(可关闭)</a>
 						</div>
-						<div class="input-box clearfix">
-							<div class="input-label">select框查询：</div>
-							<div class="input-text">
-								<div class="input-block">
-									<input type="text" class="input-w1">
-									<span class="input-icon" style="background: url(../images/arrow_lower2.png) no-repeat;"></span>
-									<ul class="select-nav" style="display: none;">
-										<li>查询条件4</li>
-										<li>查询条件5</li>
-										<li>查询条件6</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="input-box clearfix">
-							<div class="input-label">单选框查询：</div>
-							<div class="input-text">
-								<div class="input-radio">
-									<label><input type="radio" name="radio" />选项一</label>
-									<label><input type="radio" name="radio" />选项二</label>
-									<label><input type="radio" name="radio" />选项三三三</label>
-									<label><input type="radio" name="radio" />选项四</label>
-								</div>
-							</div>
-						</div>
-						<div class="input-box clearfix">
-							<div class="input-label">复选框查询：</div>
-							<div class="input-text">
-								<div class="input-checkbox">
-									<label><input type="checkbox" name="checkbox" />选择项一</label>
-									<label><input type="checkbox" name="checkbox" />选择项二</label>
-									<label><input type="checkbox" name="checkbox" />选择项三</label>
-									<label><input type="checkbox" name="checkbox" />选择项四</label>
-								</div>
-							</div>
-						</div>
-						<div class="input-box1 clearfix">
-							<a class="blue-btn">确定</a>
-							<a class="org-btn">关闭</a>
+						<div class="dw-nav">
+							<div class="dw-ul">
+								<ul>
+									<li class="dw-liactive">AB门大门口</li>
+									<li>监狱俯视</li>
+									<li>四监区二楼XX房</li>
+									<li>五监区二楼XX房</li>
+									<li>六监区二楼XX房</li>
+									<li>七监区二楼XX房</li>
+									<li>八监区二楼XX房</li>
+									<li>九监区二楼XX房</li>
+									<li>十监区二楼XX房</li>
+									<li>十一监区二楼XX房</li>
+									<li>十二监区二楼XX房</li>
+									<li>十二监区二楼XX房</li>
+									<li>十二监区二楼XX房</li>
+									<li>十二监区二楼XX房</li>
+								</ul>
+							</div>							
 						</div>
 					</div>
 				</li>
@@ -304,7 +280,7 @@
 				</li>
 			</ul>
 		</div>
-	</div> -->
+	</div>
 	
 	<!-- 电子地图显示楼层框 -->
 	<!-- <div class="floor-choose">
@@ -346,7 +322,7 @@
 	</div> -->
 
 	<!-- 通讯调度页面 -->
-	<div class="tx-dispatch">
+	<!-- <div class="tx-dispatch">
 		<div class="tx-content">
 			<ul class="tx-ul">
 				<li class="tx-active" _content="tx-ulcon1">组别</li>
@@ -375,26 +351,6 @@
 						<div class="tx-tbody">
 							<table>
 								<tbody>
-									<!-- <tr class="ftr-odd">
-										<td width="30%">张三1</td>
-										<td width="40%">13258964785</td>
-										<td width="30%"><a class="org-small-btn del-tr">删除</a></td>
-									</tr>
-									<tr>
-										<td width="30%">张三2</td>
-										<td width="40%">13258964785</td>
-										<td width="30%"><a class="org-small-btn del-tr">删除</a></td>
-									</tr>
-									<tr class="ftr-odd">
-										<td width="30%">张三3</td>
-										<td width="40%">13258964785</td>
-										<td width="30%"><a class="org-small-btn del-tr">删除</a></td>
-									</tr>
-									<tr>
-										<td width="30%">张三4</td>
-										<td width="40%">13258964785</td>
-										<td width="30%"><a class="org-small-btn del-tr">删除</a></td>
-									</tr>
 									<tr class="ftr-odd">
 										<td width="30%">张三1</td>
 										<td width="40%">13258964785</td>
@@ -416,6 +372,26 @@
 										<td width="30%"><a class="org-small-btn del-tr">删除</a></td>
 									</tr>
 									<tr class="ftr-odd">
+										<td width="30%">张三1</td>
+										<td width="40%">13258964785</td>
+										<td width="30%"><a class="org-small-btn del-tr">删除</a></td>
+									</tr>
+									<tr>
+										<td width="30%">张三2</td>
+										<td width="40%">13258964785</td>
+										<td width="30%"><a class="org-small-btn del-tr">删除</a></td>
+									</tr>
+									<tr class="ftr-odd">
+										<td width="30%">张三3</td>
+										<td width="40%">13258964785</td>
+										<td width="30%"><a class="org-small-btn del-tr">删除</a></td>
+									</tr>
+									<tr>
+										<td width="30%">张三4</td>
+										<td width="40%">13258964785</td>
+										<td width="30%"><a class="org-small-btn del-tr">删除</a></td>
+									</tr>
+									<tr class="ftr-odd">
 										<td width="30%">张三2</td>
 										<td width="40%">13258964785</td>
 										<td width="30%"><a class="org-small-btn del-tr">删除</a></td>
@@ -444,7 +420,7 @@
 										<td width="30%">张三4</td>
 										<td width="40%">13258964785</td>
 										<td width="30%"><a class="org-small-btn del-tr">删除</a></td>
-									</tr> -->
+									</tr>
 								</tbody>
 							</table>
 						</div>
@@ -453,9 +429,9 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
-	<div class="tx-pop" id="tx-pop" style="display: none;">
+	<!-- <div class="tx-pop" id="tx-pop" style="display: none;">
 		<div class="hj-state"><img src="../images/hj_state.gif" /></div>
 		<div class="hj-p-des">
 			<div class="hj-p">
@@ -557,7 +533,7 @@
 		</div>
 		<a class="hj-blue-btn"><img src="../images/phone_icon.png" />呼叫取消</a>
 		<a class="hj-red-btn"><img src="../images/phone_icon.png" />呼叫挂断</a>
-	</div>
+	</div> -->
 
 	<script type="text/javascript" src="../js/jquery.min.js"></script>
 	<script type="text/javascript" src="../js/common.js"></script>
@@ -572,8 +548,14 @@
 			//右侧导航内容点击效果
 			$(".third-ul li").click(function(){
 				$(this).addClass("tdli-active").siblings().removeClass("tdli-active");
-				$(this).find(".tdli-con").show();
-				$(this).siblings("li").find(".tdli-con").hide();
+				// $(this).find(".tdli-con").show();
+				// $(this).siblings("li").find(".tdli-con").hide();
+				$(this).find(".tdli-con").show().animate({
+					"right": "146px"
+				},300);
+				$(this).siblings("li").find(".tdli-con").hide().animate({
+					"right": "-28rem"
+				},300);
 
 				$(this).find(".input-box1 .org-btn").click(function(){
 					//阻止事件冒泡
@@ -587,6 +569,11 @@
 			        var that = this;
 					$(that).parent(".input-box1").parent(".tdli-con").hide();
 				});
+			});
+
+			//定位弹出框的li点击
+			$(".dw-ul li").click(function(){
+				$(this).addClass("dw-liactive").siblings().removeClass("dw-liactive");
 			});
 
 			//点击楼层效果
